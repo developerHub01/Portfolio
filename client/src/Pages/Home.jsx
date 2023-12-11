@@ -15,7 +15,6 @@ const Home = () => {
       <MySkills />
       <Education />
       <ContactWithMe />
-      <ContactInfo />
       <Footer />
     </>
   );

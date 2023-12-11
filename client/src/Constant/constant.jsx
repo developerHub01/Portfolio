@@ -1,4 +1,5 @@
 import avatarImg from "../assets/avatar.jpg";
+import contactBg from "../assets/contactBg.jpg";
 import cvPdfFile from "../assets/cvPdf.pdf";
 import gmailIcon from "../assets/icons/gmail.png";
 import phoneIcon from "../assets/icons/phone.png";
@@ -29,5 +30,8 @@ export {
   githubIcon,
   figmaIcon,
   pythonIcon,
+  contactBg,
 };
 export const githubLink = "https://github.com/developerHub01";
+export const authorEmail = "shakil102043@gmail.com";
+export const authorPhone = "01703374162";

@@ -27,7 +27,7 @@ const socialLinks = [
 ];
 const AboutDetails = () => {
   return (
-    <div className="text-lightWhiteColor text-base flex flex-col justify-center items-center md:items-start text-center md:text-left gap-4">
+    <div className="text-lightWhiteColor text-base flex flex-col justify-center items-center md:items-start text-center md:text-left gap-10">
       <Heading text="About Me" />
       <div className="block bg-primaryDarkColor px-2 py-1 leading-loose rounded-xl font-headingFont">
         <p className="font-primaryFont">

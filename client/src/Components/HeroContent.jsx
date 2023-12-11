@@ -1,7 +1,13 @@
 import React from "react";
 import TypingAnimator from "react-typing-animator";
 import IconWithText from "./Common/IconWithText";
-import { cvPdfFile, gmailIcon, phoneIcon } from "../Constant/constant";
+import {
+  authorEmail,
+  authorPhone,
+  cvPdfFile,
+  gmailIcon,
+  phoneIcon,
+} from "../Constant/constant";
 import { Link } from "react-router-dom";
 
 const HeroContent = () => {
@@ -33,8 +39,8 @@ const HeroContent = () => {
         />
       </h2>
       <div className="flex flex-wrap gap-2 pb-2 justify-center lg:justify-start items-center">
-        <IconWithText icon={gmailIcon} content="shakil102043@gmail.com" />
-        <IconWithText icon={phoneIcon} content="01703374162" />
+        <IconWithText icon={gmailIcon} content={authorEmail} />
+        <IconWithText icon={phoneIcon} content={authorPhone} />
       </div>
       <div className="flex flex-wrap gap-2 pb-2 justify-center lg:justify-start items-center">
         <a href={cvPdfFile} download>

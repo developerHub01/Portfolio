@@ -10,7 +10,6 @@ const AboutImg = () => {
         <div className="w-full">
           <img src={avatarImg} alt="" className="w-full rounded-xl" />
         </div>
-        {/* <h2 className="text-center text-whiteColor text-2xl p-2 bg-white/20 font-bold rounded-lg">console.log("About Me")</h2> */}
         <h2 className="typingEffet text-center text-whiteColor text-base md:text-2xl py-5 p-2 bg-white/20 font-semibold rounded-lg">
           <TypingAnimator
             textArray={[`console.log("About Me")`]}

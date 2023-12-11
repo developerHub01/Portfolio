@@ -7,7 +7,7 @@ const Education = () => {
   return (
     <Section className="bg-primaryColor">
       <Container>
-        <div className="w-full flex flex-col gap-5 justify-center items-center">
+        <div className="w-full flex flex-col gap-10 justify-center items-center">
           <Heading text="My Education" align="center" />
           <div className="w-full grid md:grid-cols-2 rounded-md border-2 border-secondaryColor p-2 gap-2 text-lightWhiteColor">
             <div className="w-full p-5 border-r-2 border-secondaryColor bg-primaryDarkColor min-h-[300px] flex justify-center items-start flex-col">
