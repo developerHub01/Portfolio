@@ -12,6 +12,7 @@ import figmaIcon from "../assets/skills/figma.png";
 import javascriptIcon from "../assets/skills/javascript.png";
 import reactjsIcon from "../assets/skills/reactjs.png";
 import tailwindIcon from "../assets/skills/tailwind.png";
+import githubIcon from "../assets/skills/github.png";
 export {
   avatarImg,
   gmailIcon,
@@ -25,6 +26,7 @@ export {
   nodejsIcon,
   expressIcon,
   mongodbIcon,
+  githubIcon,
   figmaIcon,
   pythonIcon,
 };

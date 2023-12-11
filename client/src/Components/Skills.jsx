@@ -9,6 +9,7 @@ import {
   nodejsIcon,
   expressIcon,
   mongodbIcon,
+  githubIcon,
   figmaIcon,
   pythonIcon,
 } from "../Constant/constant";
@@ -24,6 +25,7 @@ const Skills = () => {
     { icon: nodejsIcon, title: "Entry-level" },
     { icon: expressIcon, title: "Entry-level" },
     { icon: mongodbIcon, title: "Entry-level" },
+    { icon: githubIcon, title: "Basic" },
     { icon: figmaIcon, title: "Intermediate" },
     { icon: pythonIcon, title: "Basic" },
   ];
