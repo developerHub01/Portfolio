@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaCodepen, FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import Heading from "./Heading";
 
 const socialLinks = [
   {
@@ -27,22 +28,18 @@ const socialLinks = [
 
 const AboutDetails = () => {
   return (
-    <div className="text-lightWhiteColor text-base flex flex-col justify-center items-center md:items-start text-center md:text-left">
-      <h2 className="text-whiteColor text-2xl md:text-3xl font-black font-headingFont pb-4">
-        Who am I?
-      </h2>
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, iure
-          molestias. Amet reiciendis, est reprehenderit voluptatibus doloribus
-          pariatur totam nemo eum tempore tempora quidem, provident obcaecati
-          laudantium veritatis qui ullam!
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, iure
-          molestias. Amet reiciendis, est reprehenderit voluptatibus doloribus
-          pariatur totam nemo eum tempore tempora quidem, provident obcaecati
-          laudantium veritatis qui ullam!
+    <div className="text-lightWhiteColor text-base flex flex-col justify-center items-center md:items-start text-center md:text-left gap-4">
+      <Heading text="About Me" />
+      <div className="block bg-primaryDarkColor px-2 py-1 leading-loose rounded-xl font-headingFont">
+        <p className="font-primaryFont">
+          <span className="text-secondaryColor">git commit -m</span>
+          <span className="text-yellow-500"> " </span>I am Abdus Shohid Shakil,
+          a programmer and front-end developer with a deep passion for web
+          technology. Currently studying Computer Science and Engineering (CSE)
+          in Bangladesh, I have accumulated approximately two years of coding
+          experience, with a specific focus on web development for the past
+          year.
+          <span className="text-yellow-500">"</span>
         </p>
       </div>
       <ul className="flex justify-start items-center gap-4">

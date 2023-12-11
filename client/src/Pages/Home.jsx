@@ -1,14 +1,16 @@
-import React from 'react'
-import HeroSection from '../Components/HeroSection'
-import AboutUs from '../Components/AboutUs';
+import React from "react";
+import HeroSection from "../Components/HeroSection";
+import MySkills from "../Components/MySkills";
+import AboutMe from "../Components/AboutMe";
 
 const Home = () => {
   return (
     <>
       <HeroSection />
-      <AboutUs />
+      <AboutMe />
+      <MySkills />
     </>
   );
-}
+};
 
-export default Home
+export default Home;

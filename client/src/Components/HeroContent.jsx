@@ -5,7 +5,12 @@ import { cvPdfFile, gmailIcon, phoneIcon } from "../Constant/constant";
 import { Link } from "react-router-dom";
 
 const HeroContent = () => {
-  const textArray = ["Front-end developer", "Programmer", "Content Creator"];
+  const textArray = [
+    "Front-end developer",
+    "MERN Developer",
+    "Programmer",
+    "Content Creator",
+  ];
   return (
     <div className="w-full text-center lg:text-left flex flex-col justify-center items-center lg:items-start gap-2">
       <h3 className="text-whiteColor text-lg md:text-2xl font-bold font-headingFont pb-2">
@@ -14,7 +19,7 @@ const HeroContent = () => {
       <h1 className="text-whiteColor text-2xl md:text-5xl font-black font-headingFont pb-4">
         Abdus Shohid&nbsp;<span className="text-secondaryColor">Shakil</span>
       </h1>
-      <h2 className="capitalize">
+      <h2 className="capitalize font-bold">
         <TypingAnimator
           textArray={textArray}
           cursorColor="#0496ff"
@@ -27,11 +32,11 @@ const HeroContent = () => {
           height="60px"
         />
       </h2>
-      <div className="flex flex-wrap gap-2 pb-2">
+      <div className="flex flex-wrap gap-2 pb-2 justify-center lg:justify-start items-center">
         <IconWithText icon={gmailIcon} content="shakil102043@gmail.com" />
         <IconWithText icon={phoneIcon} content="01703374162" />
       </div>
-      <div className="flex flex-wrap gap-2 pb-2">
+      <div className="flex flex-wrap gap-2 pb-2 justify-center lg:justify-start items-center">
         <a href={cvPdfFile} download>
           <button className="outlineButton">Download CV</button>
         </a>

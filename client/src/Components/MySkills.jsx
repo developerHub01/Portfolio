@@ -1,0 +1,20 @@
+import React from "react";
+import Section from "./Common/Section";
+import Container from "./Common/Container";
+import Skills from "./Skills";
+import Heading from "./Heading";
+
+const MySkills = () => {
+  return (
+    <Section className={`bg-primaryDarkColor min-h-screen h-full`}>
+      <Container>
+        <div className="w-full flex flex-col gap-5">
+          <Heading text="My Skills" align="center" />
+          <Skills />
+        </div>
+      </Container>
+    </Section>
+  );
+};
+
+export default MySkills;

@@ -1,5 +1,6 @@
 import React from "react";
 import { avatarImg } from "../Constant/constant";
+import TypingAnimator from "react-typing-animator";
 
 const AboutImg = () => {
   return (
@@ -9,8 +10,26 @@ const AboutImg = () => {
         <div className="w-full">
           <img src={avatarImg} alt="" className="w-full rounded-xl" />
         </div>
-        <h2 className="text-center text-whiteColor text-2xl p-2 bg-white/20 font-bold rounded-lg">console.log("About Me")</h2>
+        {/* <h2 className="text-center text-whiteColor text-2xl p-2 bg-white/20 font-bold rounded-lg">console.log("About Me")</h2> */}
+        <h2 className="typingEffet text-center text-whiteColor text-base md:text-2xl py-5 p-2 bg-white/20 font-semibold rounded-lg">
+          <TypingAnimator
+            textArray={[`console.log("About Me")`]}
+            cursorColor="#ffffff"
+            textColor="#ffffff"
+            fontSize="25px"
+            loop
+            typingSpeed={60}
+            delaySpeed={1000}
+            backspace
+          />
+        </h2>
       </div>
+
+      <style>
+        {` .typingEffet span{
+            font-size: 20px;
+        } `}
+      </style>
     </div>
   );
 };

@@ -4,7 +4,7 @@ import Container from "./Common/Container";
 import AboutImg from "./AboutImg";
 import AboutDetails from "./AboutDetails";
 
-const AboutUs = () => {
+const AboutMe = () => {
   return (
     <Section className={`bg-primaryColor min-h-screen h-full`}>
       <Container className="z-10">
@@ -17,4 +17,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default AboutMe;
