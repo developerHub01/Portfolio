@@ -5,6 +5,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  p{
+    @apply pb-4;
+  }
+}
+
 @layer components {
   .outlineButton {
     @apply border-2 border-secondaryColor hover:bg-secondaryColor text-secondaryColor hover:text-whiteColor uppercase rounded-full px-4 py-2 transition-all duration-100;

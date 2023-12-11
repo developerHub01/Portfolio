@@ -1,7 +1,8 @@
 import React from "react";
 import TypingAnimator from "react-typing-animator";
 import IconWithText from "./Common/IconWithText";
-import { gmailIcon, phoneIcon } from "../Constant/constant";
+import { cvPdfFile, gmailIcon, phoneIcon } from "../Constant/constant";
+import { Link } from "react-router-dom";
 
 const HeroContent = () => {
   const textArray = ["Front-end developer", "Programmer", "Content Creator"];
@@ -31,7 +32,9 @@ const HeroContent = () => {
         <IconWithText icon={phoneIcon} content="01703374162" />
       </div>
       <div className="flex flex-wrap gap-2 pb-2">
-        <button className="outlineButton">Download CV</button>
+        <a href={cvPdfFile} download>
+          <button className="outlineButton">Download CV</button>
+        </a>
         <button className="outlineButton">About Me</button>
       </div>
     </div>

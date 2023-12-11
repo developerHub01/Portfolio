@@ -22,7 +22,7 @@ const MainAvatar = () => {
           <Link
             to={githubLink}
             target="_blank"
-            className="absolute p-3 bg-white/50 rounded-full translate-y-[40px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-100 left-1/2 -translate-x-1/2 bottom-5"
+            className="absolute p-3 bg-white rounded-full translate-y-[40px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-100 left-1/2 -translate-x-1/2 bottom-5"
           >
             <FaGithub className="text-4xl" />
           </Link>
