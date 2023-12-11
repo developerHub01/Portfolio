@@ -35,7 +35,7 @@ const Skills = () => {
         <span className="text-red-700">const</span>{" "}
         <span className="text-whiteColor">skills = </span>[
       </span>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 py-5">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 py-5 pl-7">
         {skill.map((item, i) => (
           <SkillCard key={i} {...item} />
         ))}

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaCodepen, FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import Heading from "./Heading";
-
+import Social01 from "./Social01";
 const socialLinks = [
   {
     path: "/",
@@ -25,7 +25,6 @@ const socialLinks = [
     color: "#131417",
   },
 ];
-
 const AboutDetails = () => {
   return (
     <div className="text-lightWhiteColor text-base flex flex-col justify-center items-center md:items-start text-center md:text-left gap-4">
@@ -42,21 +41,7 @@ const AboutDetails = () => {
           <span className="text-yellow-500">"</span>
         </p>
       </div>
-      <ul className="flex justify-start items-center gap-4">
-        {socialLinks.map(({ path, element, color }, i) => (
-          <li key={i}>
-            <Link
-              to={path}
-              className={`w-10 h-10 text-whiteColor rounded-md shadow-md grid place-items-center text-xl`}
-              style={{
-                background: color,
-              }}
-            >
-              {element}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <Social01 socialLinks={socialLinks}/>
     </div>
   );
 };
