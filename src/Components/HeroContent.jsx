@@ -57,9 +57,7 @@ const HeroContent = () => {
           offset={0}
           duration={500}
         >
-          <button className="outlineButton" data-to-scrollspy-id="aboutMe">
-            About Me
-          </button>
+          <button className="outlineButton">Contact With Me</button>
         </ScrollLink>
       </div>
     </div>
