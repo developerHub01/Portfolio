@@ -117,7 +117,7 @@ const ProjectList = () => {
       </div>
 
       <button
-        className="py-2 px-5 bg-secondaryColor text-whiteColor rounded-lg capitalize"
+        className="py-2 px-5 bg-secondaryColor text-whiteColor rounded-lg capitalize font-semibold text-lg"
         onClick={handleFilterProject}
       >
         {allProjects.length > 4 && filteredCards.length === 4

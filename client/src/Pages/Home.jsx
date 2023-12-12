@@ -5,6 +5,7 @@ import AboutMe from "../Components/AboutMe";
 import Education from "../Components/Education";
 import ContactWithMe from "../Components/ContactWithMe";
 import ProjectSection from "../Components/ProjectSection";
+import ExperienceSection from "../Components/ExperienceSection";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <MySkills />
       <Education />
       <ProjectSection />
+      <ExperienceSection />
       <ContactWithMe />
     </>
   );

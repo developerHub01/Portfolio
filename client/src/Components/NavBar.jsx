@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { FaBars } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
+import { logo } from "../Constant/constant";
 const navList = [
   {
     text: "Home",
@@ -45,17 +47,19 @@ const NavBar = () => {
         style={{
           borderRadius: "0 0 100% 0",
         }}
-        onClick={() => setNavActive((prev) => !prev)}
       >
         <FaBars className="absolute top-2 left-2" />
       </span>
 
-      <div className="w-full">
+      <div className="w-full flex flex-col gap-2">
+        <Link to="/">
+          <img src={logo} alt="" />
+        </Link>
         <span className="inline-block text-yellow-500 text-2xl bg-primaryColor p-2 rounded-md font-bold">
           <span className="text-red-700">const</span>{" "}
           <span className="text-whiteColor">List = </span>[
         </span>
-        <div className="w-full h-full flex flex-col justify-center items-center gap-2 py-5 pl-5">
+        <div className="w-full h-full flex flex-col justify-center items-center gap-2 py-2 pl-5">
           {navList.map(({ text, id }, i) => (
             <ScrollLink
               key={i}

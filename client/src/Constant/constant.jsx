@@ -1,4 +1,6 @@
 import avatarImg from "../assets/avatar.jpg";
+import avatarImg2 from "../assets/avatar2.jpg";
+import logo from "../assets/logo.png";
 import contactBg from "../assets/contactBg.jpg";
 import cvPdfFile from "../assets/cvPdf.pdf";
 import gmailIcon from "../assets/icons/gmail.png";
@@ -24,6 +26,8 @@ import weatherForecastPreview from "../assets/project/weatherForecast.png";
 import CFDarkPreview from "../assets/project/CFDark.png";
 export {
   avatarImg,
+  avatarImg2,
+  logo,
   gmailIcon,
   phoneIcon,
   cvPdfFile,
