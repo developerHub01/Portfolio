@@ -12,37 +12,37 @@ import {
 import { SiCodeforces, SiLeetcode } from "react-icons/si";
 const socialLinks = [
   {
-    path: "/",
+    path: "https://www.linkedin.com/in/md-abdus-shohid-shakil",
     element: <FaLinkedinIn />,
     color: "#0a66c2",
   },
   {
-    path: "/",
+    path: "https://github.com/developerHub01",
     element: <FaGithub />,
     color: "#333333",
   },
   {
-    path: "/",
+    path: "https://www.facebook.com/abdusshohid.shakil.5",
     element: <FaFacebookF />,
     color: "#1877f2",
   },
   {
-    path: "/",
+    path: "https://codepen.io/shakil102043",
     element: <FaCodepen />,
     color: "#131417",
   },
   {
-    path: "/",
+    path: "https://www.youtube.com/@DeveloperHub1",
     element: <FaYoutube />,
     color: "#ff0000",
   },
   {
-    path: "/",
+    path: "https://leetcode.com/shakil102043",
     element: <SiLeetcode />,
     color: "#F89E1B",
   },
   {
-    path: "/",
+    path: "https://codeforces.com/profile/abdusShohidShakil",
     element: <SiCodeforces />,
     color: "#B11712",
   },

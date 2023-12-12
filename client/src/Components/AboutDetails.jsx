@@ -5,22 +5,22 @@ import Heading from "./Heading";
 import Social01 from "./Social01";
 const socialLinks = [
   {
-    path: "/",
+    path: "https://www.linkedin.com/in/md-abdus-shohid-shakil/",
     element: <FaLinkedinIn />,
     color: "#0a66c2",
   },
   {
-    path: "/",
+    path: "https://github.com/developerHub01",
     element: <FaGithub />,
     color: "#333333",
   },
   {
-    path: "/",
+    path: "https://www.facebook.com/abdusshohid.shakil.5",
     element: <FaFacebookF />,
     color: "#1877f2",
   },
   {
-    path: "/",
+    path: "https://codepen.io/shakil102043",
     element: <FaCodepen />,
     color: "#131417",
   },
@@ -41,7 +41,7 @@ const AboutDetails = () => {
           <span className="text-yellow-500">"</span>
         </p>
       </div>
-      <Social01 socialLinks={socialLinks}/>
+      <Social01 socialLinks={socialLinks} />
     </div>
   );
 };
