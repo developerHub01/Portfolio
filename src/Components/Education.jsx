@@ -11,13 +11,13 @@ const Education = () => {
           <Heading text="My Education" align="center" />
           <div className="w-full grid md:grid-cols-2 rounded-md border-2 border-secondaryColor p-2 gap-2 text-lightWhiteColor">
             <div className="w-full p-5 border-r-2 border-secondaryColor bg-primaryDarkColor min-h-[300px] flex justify-center items-start flex-col">
-              <AiFillSafetyCertificate className="text-5xl mb-3" />
+              <AiFillSafetyCertificate className="text-5xl mb-3 text-secondaryColor" />
               <h3 className="text-2xl font-bold text-white pb-3">BSc in CSE</h3>
               <p>North East University, Bangladesh</p>
               <p>Session: 2021-2025</p>
             </div>
             <div className="w-full p-5 border-r-2 border-secondaryColor bg-primaryDarkColor min-h-[300px] flex justify-center items-start flex-col">
-              <AiFillSafetyCertificate className="text-5xl mb-3" />
+              <AiFillSafetyCertificate className="text-5xl mb-3 text-secondaryColor" />
 
               <h3 className="text-2xl font-bold text-white pb-3">
                 Higher Secondary Cirtificate (HSC)

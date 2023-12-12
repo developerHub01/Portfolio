@@ -5,7 +5,7 @@ import TypingAnimator from "react-typing-animator";
 const AboutImg = () => {
   return (
     <div className="w-full flex justify-center items-center select-none">
-      <div className="relative w-full max-w-sm rounded-xl overflow-hidden border-4 border-secondaryColor shadow-2xl shadow-secondaryColor p-2 flex flex-col gap-2">
+      <div className="relative w-full max-w-sm rounded-xl overflow-hidden border-4 border-secondaryColor shadow-lg shadow-secondaryColor p-2 flex flex-col gap-2">
         <span className="absolute -z-10 w-full h-full bg-secondaryColor left-0 top-0"></span>
         <div className="w-full">
           <img src={avatarImg2} alt="" className="w-full rounded-xl" />

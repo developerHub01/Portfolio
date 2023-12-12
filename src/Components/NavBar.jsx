@@ -63,7 +63,7 @@ const NavBar = () => {
           {navList.map(({ text, id }, i) => (
             <ScrollLink
               key={i}
-              className="w-full block bg-primaryColor hover:bg-secondaryColor transition-all duration-100 shadow-xl shadow-primaryDarkColor border-2 border-primaryDarkColor text-lightWhiteColor p-2 rounded-md cursor-pointer"
+              className="w-full block bg-primaryColor hover:bg-secondaryColor transition-all duration-100 shadow-md shadow-primaryDarkColor/50 border-2 border-primaryDarkColor text-lightWhiteColor p-2 rounded-md cursor-pointer"
               activeClass="active"
               to={id}
               spy={true}
