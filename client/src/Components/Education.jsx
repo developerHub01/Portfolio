@@ -5,7 +5,7 @@ import Heading from "./Heading";
 import { AiFillSafetyCertificate } from "react-icons/ai";
 const Education = () => {
   return (
-    <Section className="bg-primaryColor">
+    <Section id="myEducation" className="bg-primaryColor">
       <Container>
         <div className="w-full flex flex-col gap-10 justify-center items-center">
           <Heading text="My Education" align="center" />

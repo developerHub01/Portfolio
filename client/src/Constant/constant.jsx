@@ -14,6 +14,14 @@ import javascriptIcon from "../assets/skills/javascript.png";
 import reactjsIcon from "../assets/skills/reactjs.png";
 import tailwindIcon from "../assets/skills/tailwind.png";
 import githubIcon from "../assets/skills/github.png";
+import autoMobPreview from "../assets/project/autoMob.png";
+import ELibPreview from "../assets/project/ELib.png";
+import eventMasterPreview from "../assets/project/eventMaster.png";
+import imageMatchingGamePreview from "../assets/project/imageMatchingGame.png";
+import Schedular2_oChromeExtensionPreview from "../assets/project/Schedular-2.o-Chrome-Extension.png";
+import CRCMPreview from "../assets/project/CRCM.png";
+import weatherForecastPreview from "../assets/project/weatherForecast.png";
+import CFDarkPreview from "../assets/project/CFDark.png";
 export {
   avatarImg,
   gmailIcon,
@@ -31,6 +39,14 @@ export {
   figmaIcon,
   pythonIcon,
   contactBg,
+  autoMobPreview,
+  ELibPreview,
+  eventMasterPreview,
+  imageMatchingGamePreview,
+  Schedular2_oChromeExtensionPreview,
+  CRCMPreview,
+  weatherForecastPreview,
+  CFDarkPreview,
 };
 export const githubLink = "https://github.com/developerHub01";
 export const authorEmail = "shakil102043@gmail.com";

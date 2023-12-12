@@ -7,7 +7,6 @@ const ContactForm = () => {
   const formData = useRef();
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData.current);
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -38,21 +37,21 @@ const ContactForm = () => {
           type="text"
           name="user_name"
           required
-          className="w-full p-2 border-2 border-secondaryColor bg-transparent outline-none rounded-md text-whiteColor"
+          className="inputDefault"
           placeholder="Your Full Name"
         />
         <input
           type="email"
           name="user_email"
           required
-          className="w-full p-2 border-2 border-secondaryColor bg-transparent outline-none rounded-md text-whiteColor"
+          className="inputDefault"
           placeholder="Your Email"
         />
       </div>
       <textarea
         name="message"
         required
-        className="w-full p-2 border-2 border-secondaryColor bg-transparent outline-none rounded-md text-whiteColor resize-y"
+        className="inputDefault resize-y min-h-[150px]"
         placeholder="Your message...."
       ></textarea>
       <button

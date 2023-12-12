@@ -9,6 +9,7 @@ import ContactForm from "./ContactForm";
 const ContactWithMe = () => {
   return (
     <Section
+      id="contactWithMe"
       className="bg-primaryColor flex flex-col relative"
       style={{
         background: `url('${contactBg}')`,

@@ -6,7 +6,7 @@ import HeroContent from "./HeroContent";
 
 const HeroSection = () => {
   return (
-    <Section className={`bg-primaryDarkColor min-h-screen h-full`}>
+    <Section id="heroSection" className={`bg-primaryDarkColor min-h-screen`}>
       <Container className="z-10">
         <div className="w-full grid lg:grid-cols-2 gap-x-5 gap-y-10 items-center">
           <MainAvatar />

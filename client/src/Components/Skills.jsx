@@ -33,7 +33,7 @@ const Skills = () => {
     <div className="w-full">
       <span className="inline-block text-yellow-500 text-2xl bg-primaryColor p-2 rounded-md font-bold">
         <span className="text-red-700">const</span>{" "}
-        <span className="text-whiteColor">skills = </span>[
+        <span className="text-whiteColor">mySkills = </span>[
       </span>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 py-5 pl-7">
         {skill.map((item, i) => (
