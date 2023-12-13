@@ -28,55 +28,7 @@ const navList = [
   {
     text: " Contact With Me",
     id: "contactWithMe",
-  },
-  {
-    text: "Home",
-    id: "heroSection",
-  },
-  {
-    text: "About Me",
-    id: "aboutMe",
-  },
-  {
-    text: "My Skills",
-    id: "mySkills",
-  },
-  {
-    text: "My Education",
-    id: "myEducation",
-  },
-  {
-    text: "My Projects",
-    id: "myProjects",
-  },
-  {
-    text: " Contact With Me",
-    id: "contactWithMe",
-  },
-  {
-    text: "Home",
-    id: "heroSection",
-  },
-  {
-    text: "About Me",
-    id: "aboutMe",
-  },
-  {
-    text: "My Skills",
-    id: "mySkills",
-  },
-  {
-    text: "My Education",
-    id: "myEducation",
-  },
-  {
-    text: "My Projects",
-    id: "myProjects",
-  },
-  {
-    text: " Contact With Me",
-    id: "contactWithMe",
-  },
+  }
 ];
 const NavBar = () => {
   const { navBarState, setNavBarState, setNavBarRef, setNavBarHover } =
