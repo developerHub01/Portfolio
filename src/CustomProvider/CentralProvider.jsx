@@ -5,6 +5,7 @@ const CentralProvider = ({ children }) => {
   const [navBarRef, setNavBarRef] = useState(null);
   const [scrollTopState, setScrollTopState] = useState(false);
   const [scrollTopRef, setScrollTopRef] = useState(null);
+  const [navBarHover, setNavBarHover] = useState(false);
   const hadleMainBodyClick = (e) => {
     if (!navBarRef) return;
     if (navBarRef?.current?.contains(e.target)) return;
@@ -13,14 +14,19 @@ const CentralProvider = ({ children }) => {
   };
 
   useEffect(() => {
+    if (!navBarHover) document.body.style.overflow = "auto";
+
     const handleScoll = (e) => {
       if (window.scrollY > 200) setScrollTopState((prev) => true);
       else setScrollTopState((prev) => false);
+
+      if (navBarHover) document.body.style.overflow = "hidden";
+      else document.body.style.overflow = "auto";
     };
     window.addEventListener("scroll", handleScoll);
 
     return () => window.removeEventListener("scroll", handleScoll);
-  }, [scrollTopRef, navBarState]);
+  }, [scrollTopRef, navBarState, navBarHover]);
 
   const values = {
     navBarState,
@@ -29,6 +35,7 @@ const CentralProvider = ({ children }) => {
     setNavBarRef,
     setScrollTopRef,
     scrollTopState,
+    setNavBarHover,
   };
   return (
     <CentralContext.Provider value={values}>{children}</CentralContext.Provider>

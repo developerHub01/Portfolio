@@ -29,18 +29,63 @@ const navList = [
     text: " Contact With Me",
     id: "contactWithMe",
   },
+  {
+    text: "Home",
+    id: "heroSection",
+  },
+  {
+    text: "About Me",
+    id: "aboutMe",
+  },
+  {
+    text: "My Skills",
+    id: "mySkills",
+  },
+  {
+    text: "My Education",
+    id: "myEducation",
+  },
+  {
+    text: "My Projects",
+    id: "myProjects",
+  },
+  {
+    text: " Contact With Me",
+    id: "contactWithMe",
+  },
+  {
+    text: "Home",
+    id: "heroSection",
+  },
+  {
+    text: "About Me",
+    id: "aboutMe",
+  },
+  {
+    text: "My Skills",
+    id: "mySkills",
+  },
+  {
+    text: "My Education",
+    id: "myEducation",
+  },
+  {
+    text: "My Projects",
+    id: "myProjects",
+  },
+  {
+    text: " Contact With Me",
+    id: "contactWithMe",
+  },
 ];
 const NavBar = () => {
-  const { navBarState, setNavBarState, setNavBarRef } =
+  const { navBarState, setNavBarState, setNavBarRef, setNavBarHover } =
     useContext(CentralContext);
   const navBarRef = useRef(null);
   useEffect(() => {
     setNavBarRef((prev) => navBarRef);
   }, [navBarRef]);
 
-  const handleNavBarMouseOver = (e) => {
-    e.preventDefault();
-  };
   return (
     <div
       className={`fixed z-[999] w-[250px] h-screen bg-secondaryColor shadow-lg transition-all duration-150 shadow-primaryDarkColor/20 grid place-items-center px-3 pt-16 pb-5 ${
@@ -50,6 +95,9 @@ const NavBar = () => {
         clipPath: navBarState ? "circle(200% at 0 0)" : "circle(60px at 0 0)",
       }}
       ref={navBarRef}
+      onMouseEnter={() => setNavBarHover((prev) => true)}
+      onMouseOver={() => setNavBarHover((prev) => true)}
+      onMouseLeave={() => setNavBarHover((prev) => false)}
     >
       <span
         className="fixed top-0 left-0 w-[60px] h-[60px] grid place-items-center text-3xl text-whiteColor cursor-pointer pointer-events-auto shadow-2xl shadow-primaryDarkColor"
@@ -78,8 +126,8 @@ const NavBar = () => {
             <span className="text-whiteColor">List = </span>
             {"["}
           </span>
-          <div className="overflow-auto">
-            <div className="navBarMenuList w-full h-full flex-grow-0 flex-shrink-0 flex flex-col gap-2 pr-1 overflow-auto">
+          <div className="navBarMenuList overflow-auto">
+            <div className="w-full h-full flex-grow-0 flex-shrink-0 flex flex-col gap-2 pr-1 overflow-auto">
               {navList.map(({ text, id }, i) => (
                 <div className="pl-5" key={i}>
                   <ScrollLink
