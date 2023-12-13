@@ -39,8 +39,7 @@ const NavBar = () => {
       style={{
         clipPath: navActive ? "circle(200% at 0 0)" : "circle(60px at 0 0)",
       }}
-      onMouseOver={() => setNavActive((prev) => true)}
-      onMouseLeave={() => setNavActive((prev) => false)}
+      onClick={(e) => setNavActive((prev) => !prev)}
     >
       <span
         className="fixed top-0 left-0 w-[60px] h-[60px] grid place-items-center text-3xl text-whiteColor cursor-pointer pointer-events-auto shadow-2xl shadow-primaryDarkColor"
