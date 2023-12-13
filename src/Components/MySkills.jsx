@@ -9,7 +9,7 @@ const MySkills = () => {
     <Section id="mySkills" className={`bg-primaryDarkColor min-h-screen`}>
       <Container>
         <div className="w-full flex flex-col gap-10">
-          <Heading text="My Skills" align="center" />
+          <Heading text="My Skills" align="center" theme="light" />
           <Skills />
         </div>
       </Container>

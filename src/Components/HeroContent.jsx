@@ -24,7 +24,7 @@ const HeroContent = () => {
       </h3>
       <h1 className="text-whiteColor text-2xl md:text-5xl font-black font-headingFont pb-4">
         Abdus Shohid&nbsp;
-        <span className="text-secondaryColor border-b-8 border-secondaryColor shadow-lg shadow-secondaryColor px-2 rounded-tl-lg">
+        <span className="text-secondaryColor border-b-8 border-secondaryColor shadow-lg px-2 rounded-tl-lg">
           Shakil
         </span>
       </h1>

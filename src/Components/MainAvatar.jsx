@@ -14,7 +14,7 @@ const MainAvatar = () => {
   return (
     <div className="grid place-items-center p-3 lg:order-2">
       <div
-        className={`w-[90%] max-w-sm aspect-square rounded-full border-[30px] border-primaryColor relative grid place-items-center shadow-lg shadow-secondaryColor`}
+        className={`w-[90%] max-w-sm aspect-square rounded-full border-[30px] border-primaryColor relative grid place-items-center shadow-lg`}
         ref={wrapperRef}
       >
         <div className="w-full h-full overflow-hidden rounded-full border-8 border-secondaryColor group">
