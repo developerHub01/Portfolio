@@ -52,6 +52,102 @@ export {
   weatherForecastPreview,
   CFDarkPreview,
 };
+
+export const allProjects = [
+  {
+    previewImg: autoMobPreview,
+    title: "AutoMob",
+    liveLink: "https://automob-786c8.web.app/",
+    codeLink: "https://github.com/developerHub01/AutoMob-Client",
+    technologies: [
+      "html",
+      "css",
+      "tailwind",
+      "js",
+      "react",
+      "firebase",
+      "nodejs",
+      "express",
+      "mongodb",
+    ],
+  },
+  {
+    previewImg: ELibPreview,
+    title: "ELib",
+    liveLink: "https://elib-16499.web.app/",
+    codeLink: "https://github.com/developerHub01/ELib-Client",
+    technologies: [
+      "html",
+      "css",
+      "tailwind",
+      "js",
+      "react",
+      "firebase",
+      "nodejs",
+      "express",
+      "mongodb",
+    ],
+  },
+  {
+    previewImg: eventMasterPreview,
+    title: "EventMaster",
+    liveLink: "https://event-management-26e83.web.app/",
+    codeLink: "https://github.com/developerHub01/Event-Management-React",
+    technologies: ["html", "css", "tailwind", "js", "react", "firebase"],
+  },
+  {
+    previewImg: imageMatchingGamePreview,
+    title: "Image Matching Game",
+    liveLink: "https://developerhub01.github.io/matchImageGame/",
+    codeLink: "https://github.com/developerHub01/matchImageGame",
+    technologies: ["html", "css", "js"],
+  },
+
+  {
+    previewImg: CRCMPreview,
+    title: "CRCM Creative Result Card Maker",
+    liveLink: "https://developerhub01.github.io/CRCM/",
+    codeLink: "https://github.com/developerHub01/CRCM",
+    technologies: ["html", "css", "js"],
+  },
+  {
+    previewImg: Schedular2_oChromeExtensionPreview,
+    title: "Schedular-2.o-Chrome-Extension",
+    liveLink: "",
+    codeLink:
+      "https://github.com/developerHub01/Schedular-2.o-Chrome-Extension",
+    technologies: ["html", "css", "js", "chrome"],
+  },
+  {
+    previewImg: CFDarkPreview,
+    title: "CF Dark | Chrome Extension",
+    liveLink: "",
+    codeLink: "https://github.com/developerHub01/CF_Dark",
+    technologies: ["html", "css", "js", "chrome"],
+  },
+  {
+    previewImg: weatherForecastPreview,
+    title: "Weather-Forecast-Chrome-Extension",
+    liveLink: "",
+    codeLink:
+      "https://github.com/developerHub01/Weather-Forecast-Chrome-Extension",
+    technologies: ["html", "css", "js", "chrome"],
+  },
+];
+
+export const educationData = [
+  {
+    type: "BSc in CSE",
+    institution: "North East University, Bangladesh",
+    session: "2021-2025",
+  },
+  {
+    type: "Higher Secondary Cirtificate (HSC)",
+    institution: "Shahaporan Govt. College",
+    session: "2018-2020",
+  },
+];
+
 export const githubLink = "https://github.com/developerHub01";
 export const authorEmail = "shakil102043@gmail.com";
 export const authorPhone = "01703374162";
