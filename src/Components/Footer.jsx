@@ -51,11 +51,11 @@ const Footer = () => {
   return (
     <Section className="bg-primaryDarkColor">
       <Container>
-        <div className="w-full grid md:grid-cols-2 gap-5 items-center">
-          <p className="pb-0 text-lightWhiteColor text-center md:text-left">
+        <div className="w-full grid lg:grid-cols-2 gap-5 items-center">
+          <p className="pb-0 text-lightWhiteColor text-center lg:text-left">
             All &copy;right reserved to Shakil(DeveloperHub)
           </p>
-          <div className="w-full flex justify-center md:justify-end">
+          <div className="w-full flex justify-center lg:justify-end">
             <Social01 socialLinks={socialLinks} />
           </div>
         </div>

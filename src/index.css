@@ -25,3 +25,24 @@
     @apply w-8 h-8 rounded-full bg-whiteColor grid place-items-center text-2xl cursor-pointer;
   }
 }
+
+/* For Firefox */
+.navBarMenuList {
+  width: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(234, 179, 8) rgb(34, 34, 59);
+}
+
+/* For Webkit browsers like Chrome and Safari */
+.navBarMenuList::-webkit-scrollbar {
+  width: 12px;
+}
+
+.navBarMenuList::-webkit-scrollbar-thumb {
+  background-color: rgb(34, 34, 59);
+  border-radius: 50px;
+}
+
+.navBarMenuList::-webkit-scrollbar-track {
+  background-color: rgb(4, 150, 255);
+}

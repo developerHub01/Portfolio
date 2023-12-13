@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import { FaBars } from "react-icons/fa6";
+import React, { useContext, useEffect, useRef, useState } from "react";
+import { FaBars, FaXmark } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { logo } from "../Constant/constant";
+import { CentralContext } from "../CustomProvider/CentralProvider";
 const navList = [
   {
     text: "Home",
@@ -30,53 +31,76 @@ const navList = [
   },
 ];
 const NavBar = () => {
-  const [navActive, setNavActive] = useState(false);
+  const { navBarState, setNavBarState, setNavBarRef } =
+    useContext(CentralContext);
+  const navBarRef = useRef(null);
+  useEffect(() => {
+    setNavBarRef((prev) => navBarRef);
+  }, [navBarRef]);
+
+  const handleNavBarMouseOver = (e) => {
+    e.preventDefault();
+  };
   return (
     <div
-      className={`fixed z-[999] w-[250px] h-screen bg-secondaryColor shadow-lg transition-all duration-150 shadow-primaryDarkColor/20 grid place-items-center px-5 py-10 ${
-        navActive ? "pointer-events-auto" : "pointer-events-none"
+      className={`fixed z-[999] w-[250px] h-screen bg-secondaryColor shadow-lg transition-all duration-150 shadow-primaryDarkColor/20 grid place-items-center px-3 pt-16 pb-5 ${
+        navBarState ? "pointer-events-auto" : "pointer-events-none"
       }`}
       style={{
-        clipPath: navActive ? "circle(200% at 0 0)" : "circle(60px at 0 0)",
+        clipPath: navBarState ? "circle(200% at 0 0)" : "circle(60px at 0 0)",
       }}
-      onClick={(e) => setNavActive((prev) => !prev)}
+      ref={navBarRef}
     >
       <span
         className="fixed top-0 left-0 w-[60px] h-[60px] grid place-items-center text-3xl text-whiteColor cursor-pointer pointer-events-auto shadow-2xl shadow-primaryDarkColor"
         style={{
           borderRadius: "0 0 100% 0",
         }}
+        onClick={(e) => setNavBarState((prev) => !prev)}
       >
-        <FaBars className="absolute top-2 left-2" />
+        {navBarState ? (
+          <FaXmark className="absolute top-2 left-2" />
+        ) : (
+          <FaBars className="absolute top-2 left-2" />
+        )}
       </span>
 
-      <div className="w-full flex flex-col gap-2">
-        <Link to="/">
-          <img src={logo} alt="" />
+      <div className="w-full h-full flex flex-col justify-center gap-2 overflow-hidden">
+        <Link
+          to="/"
+          className="text-center bg-primaryColor text-whiteColor font-headingFont rounded-md p-2 text-2xl font-bold"
+        >
+          Shakil
         </Link>
-        <span className="inline-block text-yellow-500 text-2xl bg-primaryColor p-2 rounded-md font-bold">
-          <span className="text-red-700">const</span>{" "}
-          <span className="text-whiteColor">List = </span>[
-        </span>
-        <div className="w-full h-full flex flex-col justify-center items-center gap-2 py-2 pl-5">
-          {navList.map(({ text, id }, i) => (
-            <ScrollLink
-              key={i}
-              className="w-full block bg-primaryColor hover:bg-secondaryColor transition-all duration-100 shadow-md shadow-primaryDarkColor/50 border-2 border-primaryDarkColor text-lightWhiteColor p-2 rounded-md cursor-pointer"
-              activeClass="active"
-              to={id}
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={500}
-            >
-              {text}
-            </ScrollLink>
-          ))}
+        <div className="flex h-full flex-col gap-2 overflow-hidden justify-center">
+          <span className="inline-block flex-grow-0 text-yellow-500 text-2xl bg-primaryColor px-2 py-1 md:p-2 rounded-md font-bold">
+            <span className="text-red-700">const</span>{" "}
+            <span className="text-whiteColor">List = </span>
+            {"["}
+          </span>
+          <div className="overflow-auto">
+            <div className="navBarMenuList w-full h-full flex-grow-0 flex-shrink-0 flex flex-col gap-2 pr-1 overflow-auto">
+              {navList.map(({ text, id }, i) => (
+                <div className="pl-5" key={i}>
+                  <ScrollLink
+                    className="w-full block bg-primaryColor hover:bg-secondaryColor transition-all duration-100 shadow-md shadow-primaryDarkColor/50 border-2 border-primaryDarkColor text-lightWhiteColor px-2 py-1 md:p-2 rounded-md cursor-pointer"
+                    activeClass="active"
+                    to={id}
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                  >
+                    {text}
+                  </ScrollLink>
+                </div>
+              ))}
+            </div>
+          </div>
+          <span className="inline-block text-yellow-500 text-2xl bg-primaryColor px-2 py-1 md:p-2 rounded-md font-bold">
+            {"]"}
+          </span>
         </div>
-        <span className="inline-block text-yellow-500 text-2xl bg-primaryColor p-2 rounded-md font-bold">
-          ]
-        </span>
       </div>
     </div>
   );
