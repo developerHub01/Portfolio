@@ -60,8 +60,6 @@ export const allProjects = [
     liveLink: "https://automob-786c8.web.app/",
     codeLink: "https://github.com/developerHub01/AutoMob-Client",
     technologies: [
-      "html",
-      "css",
       "tailwind",
       "js",
       "react",
@@ -77,8 +75,6 @@ export const allProjects = [
     liveLink: "https://elib-16499.web.app/",
     codeLink: "https://github.com/developerHub01/ELib-Client",
     technologies: [
-      "html",
-      "css",
       "tailwind",
       "js",
       "react",
@@ -93,7 +89,7 @@ export const allProjects = [
     title: "EventMaster",
     liveLink: "https://event-management-26e83.web.app/",
     codeLink: "https://github.com/developerHub01/Event-Management-React",
-    technologies: ["html", "css", "tailwind", "js", "react", "firebase"],
+    technologies: ["tailwind", "js", "react", "firebase"],
   },
   {
     previewImg: imageMatchingGamePreview,
