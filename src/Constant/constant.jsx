@@ -2,7 +2,7 @@ import avatarImg from "../assets/avatar.jpg";
 import avatarImg2 from "../assets/avatar2.jpg";
 import logo from "../assets/logo.png";
 import contactBg from "../assets/contactBg.jpg";
-import cvPdfFile from "../assets/cvPdf.pdf";
+import cvPdfFile from "../assets/Shakil-resume.pdf";
 import gmailIcon from "../assets/icons/gmail.png";
 import phoneIcon from "../assets/icons/phone.png";
 import htmlIcon from "../assets/skills/html.png";
