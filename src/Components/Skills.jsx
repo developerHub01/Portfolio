@@ -11,6 +11,7 @@ import {
   githubIcon,
   figmaIcon,
   pythonIcon,
+  seleniumIcon
 } from "../Constant/constant";
 import SkillCard from "./SkillCard";
 
@@ -27,6 +28,7 @@ const Skills = () => {
     { icon: githubIcon, title: "Basic" },
     { icon: figmaIcon, title: "Intermediate" },
     { icon: pythonIcon, title: "Basic" },
+    { icon: seleniumIcon, title: "Basic" },
   ];
 
   return (
