@@ -17,14 +17,17 @@ import reactjsIcon from "../assets/skills/reactjs.png";
 import tailwindIcon from "../assets/skills/tailwind.png";
 import githubIcon from "../assets/skills/github.png";
 import seleniumIcon from "../assets/skills/selenium.png";
+import puppeteerIcon from "../assets/skills/puppeteer.png";
 import autoMobPreview from "../assets/project/autoMob.png";
 import ELibPreview from "../assets/project/ELib.png";
+import SnapThePagePreview from "../assets/project/Snap-The-Page.png";
 import eventMasterPreview from "../assets/project/eventMaster.png";
 import imageMatchingGamePreview from "../assets/project/imageMatchingGame.png";
 import Schedular2_oChromeExtensionPreview from "../assets/project/Schedular-2.o-Chrome-Extension.png";
 import CRCMPreview from "../assets/project/CRCM.png";
 import weatherForecastPreview from "../assets/project/weatherForecast.png";
 import CFDarkPreview from "../assets/project/CFDark.png";
+import snapThePagePreview from "../assets/project/snapThePage.png";
 export {
   avatarImg,
   avatarImg2,
@@ -44,6 +47,7 @@ export {
   figmaIcon,
   pythonIcon,
   seleniumIcon,
+  puppeteerIcon,
   contactBg,
   autoMobPreview,
   ELibPreview,
@@ -84,6 +88,19 @@ export const allProjects = [
       "nodejs",
       "express",
       "mongodb",
+    ],
+  },
+  {
+    previewImg: SnapThePagePreview,
+    title: "Snap-The-Page",
+    liveLink: "https://snap-the-page.vercel.app/",
+    codeLink: "https://github.com/developerHub01/Snap-The-Page",
+    technologies: [
+      "js",
+      "react",
+      "nodejs",
+      "express",
+      "puppeteer"
     ],
   },
   {
@@ -129,6 +146,14 @@ export const allProjects = [
     liveLink: "",
     codeLink:
       "https://github.com/developerHub01/Weather-Forecast-Chrome-Extension",
+    technologies: ["html", "css", "js", "chrome"],
+  },
+  {
+    previewImg: snapThePagePreview,
+    title: "Snap-The-Page-Chrome-Extension",
+    liveLink: "",
+    codeLink:
+      "https://github.com/developerHub01/Snap-The-Page-Chrome-Extension",
     technologies: ["html", "css", "js", "chrome"],
   },
 ];

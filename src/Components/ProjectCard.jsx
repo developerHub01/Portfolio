@@ -14,6 +14,7 @@ import { ImHtmlFive } from "react-icons/im";
 import { RiFullscreenFill } from "react-icons/ri";
 import ProjectPreview from "./ProjectPreview";
 import { ProjectImgPreviewContext } from "../CustomProvider/ProjectImgPreviewProvider";
+import { SiPuppeteer } from "react-icons/si";
 
 const ProjectCard = ({
   previewImg,
@@ -69,61 +70,85 @@ const ProjectCard = ({
                 case "html":
                   return (
                     <div key={i} className="projectTechnologyIcons">
-                      <ImHtmlFive className="text-[#DD4B25]" />
+                      <ImHtmlFive className="text-[#DD4B25]" title="HTML" />
                     </div>
                   );
                 case "css":
                   return (
                     <div key={i} className="projectTechnologyIcons">
-                      <SiCss3 className="text-[#254BDD]" />
+                      <SiCss3 className="text-[#254BDD]" title="CSS" />
                     </div>
                   );
                 case "js":
                   return (
                     <div key={i} className="projectTechnologyIcons">
-                      <IoLogoJavascript className="text-[#E9D44D]" />
+                      <IoLogoJavascript
+                        className="text-[#E9D44D]"
+                        title="JavaScript"
+                      />
                     </div>
                   );
                 case "tailwind":
                   return (
                     <div key={i} className="projectTechnologyIcons">
-                      <SiTailwindcss className="text-[#38BDF8]" />
+                      <SiTailwindcss
+                        className="text-[#38BDF8]"
+                        title="Tailwind"
+                      />
                     </div>
                   );
                 case "react":
                   return (
                     <div key={i} className="projectTechnologyIcons">
-                      <FaReact className="text-[#00D6FD]" />
+                      <FaReact className="text-[#00D6FD]" title="React.js" />
                     </div>
                   );
                 case "firebase":
                   return (
                     <div key={i} className="projectTechnologyIcons">
-                      <IoLogoFirebase className="text-[#F57F17]" />
+                      <IoLogoFirebase
+                        className="text-[#F57F17]"
+                        title="Firebase"
+                      />
                     </div>
                   );
                 case "nodejs":
                   return (
                     <div key={i} className="projectTechnologyIcons">
-                      <TbBrandNodejs className="text-[#529C44]" />
+                      <TbBrandNodejs
+                        className="text-[#529C44]"
+                        title="Nodejs"
+                      />
                     </div>
                   );
                 case "express":
                   return (
                     <div key={i} className="projectTechnologyIcons">
-                      <SiExpress className="text-[#828282]" />
+                      <SiExpress
+                        className="text-[#828282]"
+                        title="Express.js"
+                      />
                     </div>
                   );
                 case "mongodb":
                   return (
                     <div key={i} className="projectTechnologyIcons">
-                      <SiMongodb className="text-[#429933]" />
+                      <SiMongodb className="text-[#429933]" title="Mongodb" />
                     </div>
                   );
                 case "chrome":
                   return (
                     <div key={i} className="projectTechnologyIcons">
-                      <FaChrome className="text-[#D7342A]" />
+                      <FaChrome className="text-[#D7342A]" title="Chrome" />
+                    </div>
+                  );
+                case "puppeteer":
+                  return (
+                    <div key={i} className="projectTechnologyIcons">
+                      <SiPuppeteer
+                        className="text-[#018b69]"
+                        title="Puppeteer"
+                      />
                     </div>
                   );
               }
