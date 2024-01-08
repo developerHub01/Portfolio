@@ -9,7 +9,7 @@ const ExperienceSection = () => {
       <Container>
         <div className="flex flex-col gap-10">
           <Heading text="My Experience" key="center" />
-          <div className="block bg-primaryDarkColor px-2 py-1 leading-loose rounded-xl font-headingFont">
+          <div className="w-full max-w-4xl block bg-primaryDarkColor px-2 py-1 leading-loose rounded-xl font-headingFont">
             <p className="font-primaryFont text-lightWhiteColor text-center">
               <span className="text-secondaryColor">git commit -m</span>
               <span className="text-yellow-500"> " </span>Abdus Shohid Shakil, a
