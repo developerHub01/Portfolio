@@ -15,7 +15,6 @@ const AboutImg = () => {
             textArray={[`console.log("About Me")`]}
             cursorColor="#ffffff"
             textColor="#ffffff"
-            fontSize="25px"
             loop
             typingSpeed={60}
             delaySpeed={1000}
