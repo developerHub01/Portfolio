@@ -16,6 +16,7 @@ import javascriptIcon from "../assets/skills/javascript.png";
 import reactjsIcon from "../assets/skills/reactjs.png";
 import tailwindIcon from "../assets/skills/tailwind.png";
 import githubIcon from "../assets/skills/github.png";
+import seleniumIcon from "../assets/skills/selenium.png";
 import autoMobPreview from "../assets/project/autoMob.png";
 import ELibPreview from "../assets/project/ELib.png";
 import eventMasterPreview from "../assets/project/eventMaster.png";
@@ -42,6 +43,7 @@ export {
   githubIcon,
   figmaIcon,
   pythonIcon,
+  seleniumIcon,
   contactBg,
   autoMobPreview,
   ELibPreview,
