@@ -1,18 +1,28 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Fira_Sans, Goldman, Inter, Open_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
+import Header from "@/components/home/header";
+import SmoothScroll from "@/components/ux/smooth-scroll";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const goldMan = Goldman({
   subsets: ["latin"],
+  variable: "--font-brand",
+  weight: ["400", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const firaSans = Fira_Sans({
   subsets: ["latin"],
+  variable: "--font-primary",
+  weight: ["400", "500", "600", "700"],
+});
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  variable: "--font-display",
+  weight: ["300", "400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -26,17 +36,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={inter.variable}
+      suppressHydrationWarning
+      data-scroll-behavior="smooth"
+    >
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${goldMan.variable} ${firaSans.variable} ${openSans.variable} antialiased min-h-screen overflow-x-clip flex flex-col`}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          // defaultTheme="system"
+          defaultTheme="light"
+          // enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <SmoothScroll>
+            <Header />
+            {children}
+          </SmoothScroll>
         </ThemeProvider>
       </body>
     </html>
