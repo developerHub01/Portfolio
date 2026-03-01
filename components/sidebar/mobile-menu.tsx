@@ -1,5 +1,6 @@
 "use client";
 
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import { CloseIcon } from "@/components/icons";
 import { usePathname } from "next/navigation";
@@ -8,7 +9,6 @@ import { useSidebar } from "@/context/sidebar-prodiver";
 import { AnimatePresence, motion } from "motion/react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { SIDEBAR_MENU_LIST } from "@/constant";
-import { createPortal } from "react-dom";
 import SidebarMenuWrapper from "@/components/sidebar/sidebar-menu-wrapper";
 
 const MobileMenu = () => {
@@ -74,7 +74,7 @@ const MobileMenu = () => {
         }}
       >
         <div className="w-full px-5 py-4 text-xl font-black font-primary leading-none flex justify-center items-center gap-4">
-          <Link href={"/"} className="flex-1">
+          <Link href={"/"} className="flex-1 select-none">
             Shakil
           </Link>
           <button
