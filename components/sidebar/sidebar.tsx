@@ -40,7 +40,7 @@ const Sidebar = () => {
         <motion.div
           layout
           className={cn(
-            "w-full px-5 py-4 text-xl font-black font-brand leading-none flex justify-start items-center gap-4",
+            "w-full px-5 py-4 text-xl font-black font-primary leading-none flex justify-start items-center gap-4",
             {
               "px-2": !isFull,
             },

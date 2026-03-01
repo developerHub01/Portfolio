@@ -72,7 +72,7 @@ const MobileMenu = () => {
           duration: 0.3,
         }}
       >
-        <div className="w-full px-5 py-4 text-xl font-black font-brand leading-none flex justify-center items-center gap-4">
+        <div className="w-full px-5 py-4 text-xl font-black font-primary leading-none flex justify-center items-center gap-4">
           <Link href={"/"} className="flex-1">
             Shakil
           </Link>
