@@ -9,6 +9,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { SIDEBAR_MENU_LIST } from "@/constant";
 import { createPortal } from "react-dom";
+import SidebarMenuWrapper from "@/components/sidebar/sidebar-menu-wrapper";
 
 const MobileMenu = () => {
   const { isOpen, handleToggleIsOpen } = useSidebar();
@@ -85,7 +86,7 @@ const MobileMenu = () => {
             <CloseIcon size={25} />
           </button>
         </div>
-        <ul className="flex flex-col select-none">
+        <SidebarMenuWrapper>
           {SIDEBAR_MENU_LIST.map(({ id, title, url, Icon }) => {
             const isActive = pathname === url;
             return (
@@ -107,7 +108,7 @@ const MobileMenu = () => {
               </li>
             );
           })}
-        </ul>
+        </SidebarMenuWrapper>
       </motion.aside>
     </AnimatePresence>,
     portalNode,

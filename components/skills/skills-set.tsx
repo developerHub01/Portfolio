@@ -12,7 +12,7 @@ interface SkillsSetProps extends ComponentProps<"div"> {
 const SkillsSet = ({ className = "", skills, ...props }: SkillsSetProps) => (
   <div
     className={cn(
-      "grid grid-cols-3 sm:grid-cols-6 md:grid-cols-8 gap-4",
+      "grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-8 gap-4",
       className,
     )}
     {...props}
@@ -21,14 +21,14 @@ const SkillsSet = ({ className = "", skills, ...props }: SkillsSetProps) => (
       <AspectRatio
         ratio={1}
         key={id}
-        className="p-8 flex flex-col justify-center items-center gap-2 hover:bg-accent select-none cursor-pointer transition-[background] duration-100"
+        className="p-4 flex flex-col justify-center items-center gap-2 hover:bg-accent select-none cursor-pointer transition-[background] duration-100"
         tabIndex={0}
       >
         <Image
           src={`/skills/${id}.png`}
           width={80}
           height={80}
-          className="w-full h-full object-contain"
+          className="w-full h-full object-contain max-h-14"
           alt={label}
         />
         <p className="text-center text-xs">{label}</p>

@@ -8,11 +8,11 @@ import { cn } from "@/lib/utils";
 import { useSidebar } from "@/context/sidebar-prodiver";
 import { AnimatePresence, motion } from "motion/react";
 import { SIDEBAR_MENU_LIST } from "@/constant";
-// import MobileMenu from "@/components/sidebar/mobile-menu";
+import { useIsMobile } from "@/hooks/use-mobile";
+import SidebarMenuWrapper from "@/components/sidebar/sidebar-menu-wrapper";
 const MobileMenu = dynamic(() => import("@/components/sidebar/mobile-menu"), {
   ssr: false,
 });
-import { useIsMobile } from "@/hooks/use-mobile";
 
 const Sidebar = () => {
   const pathname = usePathname();
@@ -79,47 +79,49 @@ const Sidebar = () => {
             )}
           </AnimatePresence>
         </motion.div>
-        <ul className="flex flex-col select-none">
-          {SIDEBAR_MENU_LIST.map(({ id, title, url, Icon }) => {
-            const isActive = pathname === url;
-            return (
-              <li key={id} className="w-full">
-                <Link
-                  href={url}
-                  className={cn(
-                    "flex px-5 py-4 gap-4 items-center text-sm relative",
-                    "hover:bg-secondary/40",
-                    "before:absolute before:inset-0 before:bg-transparent before:border-x-3  before:border-transparent before:pointer-events-none transition-all duration-100",
-                    {
-                      "bg-secondary before:border-primary": isActive,
-                      "flex-1": !isFull,
-                    },
-                  )}
-                >
-                  <Icon size={20} />
-                  <AnimatePresence>
-                    {isFull && (
-                      <motion.span
-                        className="overflow-hidden"
-                        initial={{
-                          width: "100%",
-                        }}
-                        exit={{
-                          width: 0,
-                        }}
-                        transition={{
-                          duration: 0.3,
-                        }}
-                      >
-                        {title}
-                      </motion.span>
+        <SidebarMenuWrapper>
+          <ul className="flex flex-col select-none h-full">
+            {SIDEBAR_MENU_LIST.map(({ id, title, url, Icon }) => {
+              const isActive = pathname === url;
+              return (
+                <li key={id} className="w-full">
+                  <Link
+                    href={url}
+                    className={cn(
+                      "flex px-5 py-4 gap-4 items-center text-sm relative",
+                      "hover:bg-secondary/40",
+                      "before:absolute before:inset-0 before:bg-transparent before:border-x-3  before:border-transparent before:pointer-events-none transition-all duration-100",
+                      {
+                        "bg-secondary before:border-primary": isActive,
+                        "flex-1": !isFull,
+                      },
                     )}
-                  </AnimatePresence>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+                  >
+                    <Icon size={20} />
+                    <AnimatePresence>
+                      {isFull && (
+                        <motion.span
+                          className="overflow-hidden"
+                          initial={{
+                            width: "100%",
+                          }}
+                          exit={{
+                            width: 0,
+                          }}
+                          transition={{
+                            duration: 0.3,
+                          }}
+                        >
+                          {title}
+                        </motion.span>
+                      )}
+                    </AnimatePresence>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </SidebarMenuWrapper>
         <MobileMenu />
       </motion.aside>
     </>

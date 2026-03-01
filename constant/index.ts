@@ -1,12 +1,13 @@
 import {
   ContactIcon,
+  EducationIcon,
   HomeIcon,
   ProjectIcon,
   SkillsIcon,
   UserIcon,
 } from "@/components/icons";
 
-export const SIDEBAR_MENU_LIST =  [
+export const SIDEBAR_MENU_LIST = [
   {
     id: "home",
     title: "Home",
@@ -18,6 +19,12 @@ export const SIDEBAR_MENU_LIST =  [
     title: "About",
     url: "/about",
     Icon: UserIcon,
+  },
+  {
+    id: "education",
+    title: "Education",
+    url: "/education",
+    Icon: EducationIcon,
   },
   {
     id: "skills",
@@ -37,4 +44,4 @@ export const SIDEBAR_MENU_LIST =  [
     url: "/contact",
     Icon: ContactIcon,
   },
-];
+] as const;

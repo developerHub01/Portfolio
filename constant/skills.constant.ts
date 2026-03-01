@@ -23,6 +23,10 @@ export const SKILLS: Record<"primary" | "secondary", Array<SkillInterface>> = {
       label: "Next.js",
     },
     {
+      id: "shadcn",
+      label: "Shadcn/ui",
+    },
+    {
       id: "electron",
       label: "Electron.js",
     },
