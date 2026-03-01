@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Fira_Sans, Goldman, Inter, Open_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
-import Header from "@/components/home/header";
-import SmoothScroll from "@/components/ux/smooth-scroll";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -43,20 +42,18 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
     >
       <body
-        className={`${goldMan.variable} ${firaSans.variable} ${openSans.variable} antialiased min-h-screen overflow-x-clip flex flex-col`}
+        className={`${goldMan.variable} ${firaSans.variable} ${openSans.variable} antialiased h-screen overflow-hidden flex flex-col`}
       >
         <ThemeProvider
           attribute="class"
           // defaultTheme="system"
-          defaultTheme="light"
-          // enableSystem
+          defaultTheme="dark"
+          enableSystem
           disableTransitionOnChange
         >
-          <SmoothScroll>
-            <Header />
-            {children}
-          </SmoothScroll>
+          <TooltipProvider>{children}</TooltipProvider>
         </ThemeProvider>
+        <section id="portal-root"></section>
       </body>
     </html>
   );
