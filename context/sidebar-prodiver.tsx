@@ -27,7 +27,7 @@ const SidebarProvider = ({ children }: SidebarProviderProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(true);
 
   const handleToggleIsOpen = useCallback(
-    (value?: boolean) => setIsOpen((prev) => value ?? !prev),
+    (value?: boolean) => setIsOpen(prev => value ?? !prev),
     [],
   );
 
