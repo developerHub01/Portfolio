@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Open_Sans } from "next/font/google";
+import { Inter, Open_Sans, Roboto } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
-const primarySans = Open_Sans({
+const primarySans = Roboto({
   subsets: ["latin"],
   variable: "--font-primary",
   weight: ["400", "500", "600", "700", "800"],
