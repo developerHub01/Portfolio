@@ -72,7 +72,7 @@ const Sidebar = () => {
                 }}
                 className="whitespace-nowrap overflow-hidden"
               >
-                <Link href={"/"} className="flex-1">
+                <Link href={"/"} className="flex-1 select-none">
                   Shakil
                 </Link>
               </motion.span>
