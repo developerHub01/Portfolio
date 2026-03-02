@@ -5,7 +5,11 @@ interface Props {
 }
 
 const Layout = ({ children }: Props) => {
-  return <Container className="flex flex-col gap-5">{children}</Container>;
+  return (
+    <div className="w-full h-full p-5">
+      <Container className="flex flex-col gap-5">{children}</Container>
+    </div>
+  );
 };
 
 export default Layout;

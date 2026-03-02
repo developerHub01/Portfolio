@@ -27,7 +27,7 @@ const SkillsSet = ({ className = "", skills, ...props }: SkillsSetProps) => (
             " shadow-awesome1",
             "hover:bg-accent",
             "transition-all duration-300",
-            "group-has-[:hover]/container:not-hover:blur-xs",
+            "md:group-has-[:hover]/container:not-hover:blur-xs",
             "hover:blur-none",
           )}
           tabIndex={0}
