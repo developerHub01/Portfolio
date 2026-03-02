@@ -73,7 +73,7 @@ const MobileMenu = () => {
           duration: 0.3,
         }}
       >
-        <div className="w-full px-5 py-4 text-xl font-black font-primary leading-none flex justify-center items-center gap-4">
+        <div className="w-full px-4.75 py-4 text-xl font-black font-primary leading-none flex justify-center items-center gap-4">
           <Link href={"/"} className="flex-1 select-none">
             Shakil
           </Link>
@@ -94,7 +94,7 @@ const MobileMenu = () => {
                 <Link
                   href={url}
                   className={cn(
-                    "flex px-5 py-4 gap-4 items-center text-sm relative",
+                    "flex px-4.75 py-4 gap-4 items-center text-sm relative",
                     "hover:bg-secondary/40",
                     "before:absolute before:inset-0 before:bg-transparent before:border-x-3  before:border-transparent before:pointer-events-none transition-all duration-100",
                     {

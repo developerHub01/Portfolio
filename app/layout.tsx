@@ -19,7 +19,7 @@ const displaySans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Shakil Front-end Dev",
+  title: "Shakil Front-End Dev",
   description:
     "Abdus Shohid Shakil, frontend developer and complex frontend lover.",
 };
