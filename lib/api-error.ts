@@ -5,10 +5,10 @@ export class ApiError extends Error {
 
   constructor(
     message: string,
-    options?: { 
-      status?: number; 
-      code?: string; 
-      details?: unknown 
+    options?: {
+      status?: number;
+      code?: string;
+      details?: unknown;
     },
   ) {
     super(message);
@@ -18,4 +18,3 @@ export class ApiError extends Error {
     this.details = options?.details;
   }
 }
-

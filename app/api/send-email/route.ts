@@ -16,10 +16,13 @@ export const POST = withApiHandler(async (request: Request) => {
     process.cwd(),
     "lib",
     "email-templates",
-    "contact-email.ejs"
+    "contact-email.ejs",
   );
 
-  const sentAt = new Date().toISOString().replace("T", " ").replace("Z", " UTC");
+  const sentAt = new Date()
+    .toISOString()
+    .replace("T", " ")
+    .replace("Z", " UTC");
 
   const html = await ejs.renderFile(templatePath, {
     name: payload.name,
@@ -52,6 +55,6 @@ export const POST = withApiHandler(async (request: Request) => {
     {
       sent: true,
     },
-    200
+    200,
   );
 });

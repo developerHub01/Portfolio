@@ -1,4 +1,10 @@
-import { EnvelopeIcon, GithubIcon, LinkedinIcon, PhoneIcon, YouTubeIcon } from "@/components/icons";
+import {
+  EnvelopeIcon,
+  GithubIcon,
+  LinkedinIcon,
+  PhoneIcon,
+  YouTubeIcon,
+} from "@/components/icons";
 import { PersonalInfoInterface, SocialItemInterface } from "@/types/home.types";
 
 export const PERSONAL_INFO: Array<PersonalInfoInterface> = [

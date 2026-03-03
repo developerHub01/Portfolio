@@ -8,7 +8,10 @@ export const PROJECTS: Array<ProjectDataInterface> = [
     year: "2025 — Present",
     description:
       "A full-featured desktop API client built from scratch with project-based request management. Designed as a developer-first tool with deep customization for Web & Desktop.",
-  images: Array.from({length: 1}, (_, index)=> `/projects/api-bolt/${index+1}.png`),
+    images: Array.from(
+      { length: 1 },
+      (_, index) => `/projects/api-bolt/${index + 1}.png`,
+    ),
     features: [
       "Project-based request management",
       "Auth systems (API Key, Bearer Token) with inheritance",
@@ -76,7 +79,10 @@ export const PROJECTS: Array<ProjectDataInterface> = [
     year: "2022 — Present",
     description:
       "Official marketplace for APIBolt. Developers can publish and share themes with one-click installation inside the desktop app. Fullstack implementation.",
-    images: Array.from({length: 6}, (_, index)=> `/projects/api-bolt-web/${index+1}.png`),
+    images: Array.from(
+      { length: 6 },
+      (_, index) => `/projects/api-bolt-web/${index + 1}.png`,
+    ),
     features: [
       "Full theme marketplace with auth & publishing",
       "Theme management & app integration",
@@ -88,7 +94,7 @@ export const PROJECTS: Array<ProjectDataInterface> = [
       {
         id: "typescript",
         label: "TypeScript",
-      },    
+      },
       {
         id: "tailwind",
         label: "TailwindCSS",

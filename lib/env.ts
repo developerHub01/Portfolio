@@ -12,4 +12,3 @@ export const getRequiredEnv = (key: string): string => {
 
   return value;
 };
-

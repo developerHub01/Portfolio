@@ -12,13 +12,7 @@ const FrameV1 = ({
   ...props
 }: Props) => {
   return (
-    <div
-      className={cn(
-        "relative group",
-        wrapperClass,
-      )}
-      {...props}
-    >
+    <div className={cn("relative group", wrapperClass)} {...props}>
       {children}
       <div
         className={cn(
