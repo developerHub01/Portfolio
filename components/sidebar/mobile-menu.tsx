@@ -2,13 +2,13 @@
 
 import { createPortal } from "react-dom";
 import Link from "next/link";
-import { CloseIcon } from "@/components/icons";
+import { ArrowDownTrayIcon, CloseIcon } from "@/components/icons";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { useSidebar } from "@/context/sidebar-prodiver";
 import { AnimatePresence, motion } from "motion/react";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { SIDEBAR_MENU_LIST } from "@/constant";
+import { RESUME_HREF, SIDEBAR_MENU_LIST } from "@/constant";
 import SidebarMenuWrapper from "@/components/sidebar/sidebar-menu-wrapper";
 
 const MobileMenu = () => {
@@ -109,6 +109,16 @@ const MobileMenu = () => {
             );
           })}
         </SidebarMenuWrapper>
+        <div className="mt-auto border-t border-border/30">
+          <Link
+            href={RESUME_HREF}
+            download
+            className="flex items-center gap-3 px-4.75 py-4 text-sm font-primary uppercase tracking-wider hover:bg-secondary/40 transition-colors"
+          >
+            <ArrowDownTrayIcon size={18} />
+            <span>Download Resume</span>
+          </Link>
+        </div>
       </motion.aside>
     </AnimatePresence>,
     portalNode,

@@ -13,7 +13,10 @@ const SetWrapper = ({
   ...props
 }: SetWrapperProps) => (
   <div
-    className={cn("bg-secondary p-5 flex flex-col gap-3", className)}
+    className={cn(
+      "bg-secondary p-8 sm:p-10 flex flex-col gap-6 shadow-awesome1",
+      className,
+    )}
     {...props}
   >
     {Boolean(title) && <SecondaryHeading>{title}</SecondaryHeading>}

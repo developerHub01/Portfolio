@@ -24,7 +24,7 @@ const SkillsSet = ({ className = "", skills, ...props }: SkillsSetProps) => (
           ratio={1}
           className={cn(
             "p-4 flex flex-col justify-center items-center gap-3 bg-accent/10  select-none cursor-pointer",
-            " shadow-awesome1",
+            " shadow-awesome-light",
             "hover:bg-accent",
             "transition-all duration-300",
             "md:group-has-[:hover]/container:not-hover:blur-xs",

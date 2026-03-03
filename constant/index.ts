@@ -45,3 +45,5 @@ export const SIDEBAR_MENU_LIST = [
     Icon: ContactIcon,
   },
 ] as const;
+
+export const RESUME_HREF = "/resume/abdus-shohid-shakil-resume.pdf";

@@ -11,6 +11,10 @@ export const SKILLS: Record<"primary" | "secondary", Array<SkillInterface>> = {
       label: "TypeScript",
     },
     {
+      id: "tailwind",
+      label: "TailwindCSS",
+    },
+    {
       id: "redux-toolkit",
       label: "Redux Toolkit",
     },

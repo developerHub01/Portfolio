@@ -1,13 +1,24 @@
 import { ComponentProps } from "react";
 import { cn } from "@/lib/utils";
 
+interface Props extends ComponentProps<"div"> {
+  wrapperClass?: string;
+}
+
 const FrameV1 = ({
   className = "",
+  wrapperClass = "",
   children,
   ...props
-}: ComponentProps<"div">) => {
+}: Props) => {
   return (
-    <div className="relative group" {...props}>
+    <div
+      className={cn(
+        "relative group",
+        wrapperClass,
+      )}
+      {...props}
+    >
       {children}
       <div
         className={cn(
