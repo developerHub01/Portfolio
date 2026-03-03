@@ -57,4 +57,4 @@ export const CONTACT_METHODS: Array<ContactMethodInterface> = [
     Icon: InstagramIcon,
     external: true,
   },
-];
+] as const;

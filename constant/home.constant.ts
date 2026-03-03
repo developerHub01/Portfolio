@@ -62,4 +62,4 @@ export const SOCIALS: Array<SocialItemInterface> = [
     Icon: PhoneIcon,
     href: "tel:+8801703374162",
   },
-];
+] as const;

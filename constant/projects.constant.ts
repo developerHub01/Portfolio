@@ -127,4 +127,4 @@ export const PROJECTS: Array<ProjectDataInterface> = [
       },
     ],
   },
-];
+] as const;
