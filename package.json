@@ -1,6 +1,7 @@
 {
   "name": "shakil",
   "version": "0.1.0",
+  "description": "This is my portfolio website.",
   "private": true,
   "scripts": {
     "dev": "next dev",
