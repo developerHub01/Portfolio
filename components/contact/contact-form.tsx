@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { PaperAirplaneIcon } from "@/components/icons";
 import FrameV1 from "@/components/ui/frame-v1";
 import { contactSchema } from "@/schema";
@@ -13,7 +14,19 @@ interface FormInterface {
   message: string;
 }
 
+interface ApiResponse {
+  success: boolean;
+  message: string;
+  code?: string;
+  details?: {
+    fieldErrors?: Record<string, Array<string>>;
+    formErrors?: Array<string>;
+  };
+}
+
 const ContactForm = () => {
+  const [submitMessage, setSubmitMessage] = useState<string>("");
+  const [isSubmitError, setIsSubmitError] = useState<boolean>(false);
   const form = useForm<FormInterface>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
@@ -23,29 +36,39 @@ const ContactForm = () => {
     },
   });
 
-  const handleSubmit = (data: FormInterface) => {
-    console.log("submitted...");
-    console.log(data);
+  const handleSubmit = async (data: FormInterface) => {
+    setSubmitMessage("");
+    setIsSubmitError(false);
+
+    const response = await fetch("/api/send-email", {
+      method: "POST",
+      cache: "no-cache",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    const result = (await response.json()) as ApiResponse;
+
+    if (!response.ok || !result.success) {
+      const firstFieldError = result.details?.fieldErrors
+        ? Object.values(result.details.fieldErrors).flat()[0]
+        : undefined;
+      setSubmitMessage(firstFieldError ?? result.message ?? "Request failed");
+      setIsSubmitError(true);
+      return;
+    }
+
+    setSubmitMessage(result.message || "Message sent successfully");
+    setIsSubmitError(false);
+    form.reset();
   };
 
   return (
     <FrameV1 className="opacity-0 group-hover:opacity-100">
       <form
         className="bg-secondary/30 p-8 sm:p-10 flex flex-col gap-6 shadow-awesome1 border border-border/30"
-        // onSubmit={e => {
-        //   e.preventDefault();
-        //   const form = e.currentTarget;
-        //   const name = (form.elements.namedItem("name") as HTMLInputElement)
-        //     ?.value;
-        //   const email = (form.elements.namedItem("email") as HTMLInputElement)
-        //     ?.value;
-        //   const message = (
-        //     form.elements.namedItem("message") as HTMLTextAreaElement
-        //   )?.value;
-        //   const mailtoLink = `mailto:shakil102043@gmail.com?subject=Portfolio Contact from ${encodeURIComponent(name)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
-        //   window.open(mailtoLink, "_self");
-        // }}
-
         onSubmit={form.handleSubmit(handleSubmit)}
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -141,6 +164,15 @@ const ContactForm = () => {
             className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
           />
         </button>
+        {submitMessage ? (
+          <p
+            className={
+              isSubmitError ? "text-red-500 text-sm" : "text-green-500 text-sm"
+            }
+          >
+            {submitMessage}
+          </p>
+        ) : null}
       </form>
     </FrameV1>
   );
