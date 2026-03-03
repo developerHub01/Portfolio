@@ -180,6 +180,10 @@
     @apply select-none;
   }
 
+  button {
+    @apply select-none;
+  }
+
   @keyframes scanline {
     0% {
       top: 0%;
