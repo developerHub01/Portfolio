@@ -48,7 +48,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {/* <SplashScreen /> */}
+          <SplashScreen />
           <TooltipProvider>{children}</TooltipProvider>
           <section id="portal-root"></section>
         </ThemeProvider>

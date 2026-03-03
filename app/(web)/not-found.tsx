@@ -2,11 +2,13 @@ import Link from "next/link";
 import Container from "@/components/ui/container";
 import FrameV1 from "@/components/ui/frame-v1";
 import { ArrowRightIcon } from "@/components/icons";
+import BackgroundV2 from "@/components/ui/background-v2";
 
 const NotFound = () => {
   return (
-    <div className="w-full h-full p-5 lg:p-10">
-      <Container className="min-h-full flex items-center justify-center">
+    <div className="w-full h-full p-5 lg:p-10 relative">
+      <BackgroundV2 className="absolute inset-0 pointer-events-none" />
+      <Container className="relative z-10 min-h-full flex items-center justify-center">
         <FrameV1 className="opacity-100 w-full max-w-4xl">
           <section className="bg-secondary/50 border-4 border-border/20 shadow-awesome1 p-6 sm:p-10 lg:p-14 flex flex-col gap-8">
             <div className="flex flex-col gap-3">

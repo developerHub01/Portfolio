@@ -6,11 +6,13 @@ import Container from "@/components/ui/container";
 import { SOCIALS } from "@/constant/home.constant";
 import FullNameWrapper from "@/components/home/full-name-wrapper";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import BackgroundV1 from "@/components/ui/background-v1";
 
 const HomePage = () => {
   return (
-    <div className="w-full p-5 lg:p-10 flex-1 h-full flex justify-center items-center">
-      <Container className="p-2 sm:p-4 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10 lg:gap-20">
+    <div className="w-full p-5 lg:p-10 flex-1 h-full flex justify-center items-center relative">
+      <BackgroundV1 className="absolute inset-0 z-0 pointer-events-none" />
+      <Container className="p-2 sm:p-4 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10 lg:gap-20 relative z-0">
         {/* Left Column */}
         <div className="flex-1 flex flex-col gap-8 order-2 lg:order-1">
           <div className="flex flex-col gap-4">
