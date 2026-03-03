@@ -14,6 +14,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { SidebarMenuItemInterface } from "@/types";
 
 const DesktopMenu = () => {
   const pathname = usePathname();
@@ -82,99 +83,150 @@ const DesktopMenu = () => {
         </AnimatePresence>
       </motion.div>
       <SidebarMenuWrapper>
-        {SIDEBAR_MENU_LIST.map(({ id, title, url, Icon }) => {
-          const isActive = pathname === url;
+        {SIDEBAR_MENU_LIST.map(menuItem => {
+          const isActive = pathname === menuItem.url;
           return (
-            <li key={id} className="w-full">
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link
-                    href={url}
-                    className={cn(
-                      "flex px-4.75 py-4 gap-4 items-center text-sm relative",
-                      "hover:bg-secondary/40",
-                      "before:absolute before:inset-0 before:bg-transparent before:border-x-3  before:border-transparent before:pointer-events-none transition-all duration-100",
-                      {
-                        "bg-secondary before:border-primary": isActive,
-                        "flex-1": !isFull,
-                      },
-                    )}
-                  >
-                    <Icon size={20} />
-                    <AnimatePresence>
-                      {isFull && (
-                        <motion.span
-                          className={cn("overflow-hidden", {
-                            "hidden opacity-0 pointer-events-none": isMobile,
-                          })}
-                          initial={{
-                            width: "100%",
-                          }}
-                          exit={{
-                            width: 0,
-                          }}
-                          transition={{
-                            duration: 0.3,
-                          }}
-                        >
-                          {title}
-                        </motion.span>
-                      )}
-                    </AnimatePresence>
-                  </Link>
-                </TooltipTrigger>
-                {isFull || (
+            <li key={menuItem.id} className="w-full">
+              {isFull ? (
+                <MenuItem
+                  isActive={isActive}
+                  isFull={isFull}
+                  isMobile={isMobile}
+                  {...menuItem}
+                />
+              ) : (
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <MenuItem
+                      isActive={isActive}
+                      isFull={isFull}
+                      isMobile={isMobile}
+                      {...menuItem}
+                    />
+                  </TooltipTrigger>
                   <TooltipContent side="right" align="center">
-                    <p>{title}</p>
+                    <p>{menuItem.title}</p>
                   </TooltipContent>
-                )}
-              </Tooltip>
+                </Tooltip>
+              )}
             </li>
           );
         })}
       </SidebarMenuWrapper>
       <div className="mt-auto border-t border-border/30">
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Link
-              href={RESUME_HREF}
-              download
-              className={cn(
-                "flex items-center gap-4 rounded-sm px-4.75 py-4 text-sm font-primary uppercase tracking-wider bg-secondary/50 hover:bg-secondary/80 transition-colors duration-75",
-                {
-                  "justify-center px-2": !isFull,
-                },
-              )}
+        {isFull ? (
+          <ResumeButton isFull={isFull} />
+        ) : (
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <ResumeButton isFull={isFull} />
+            </TooltipTrigger>
+            <TooltipContent
+              side="right"
+              align="center"
+              className={cn("pointer-events-none", {
+                "opacity-0": isFull,
+              })}
             >
-              <ArrowDownTrayIcon size={18} />
-              <AnimatePresence>
-                {isFull && (
-                  <motion.span
-                    className="overflow-hidden whitespace-nowrap"
-                    initial={{
-                      width: "100%",
-                    }}
-                    exit={{
-                      width: 0,
-                    }}
-                    transition={{
-                      duration: 0.3,
-                    }}
-                  >
-                    Resume
-                  </motion.span>
-                )}
-              </AnimatePresence>
-            </Link>
-          </TooltipTrigger>
-          {isFull || (
-            <TooltipContent side="right" align="center">
               <p>Download Resume</p>
             </TooltipContent>
-          )}
-        </Tooltip>
+          </Tooltip>
+        )}
       </div>
     </motion.aside>
+  );
+};
+
+interface MenuItemProps extends SidebarMenuItemInterface {
+  isActive: boolean;
+  isFull: boolean;
+  isMobile: boolean;
+}
+
+const MenuItem = ({
+  isActive,
+  isFull,
+  isMobile,
+  id,
+  title,
+  url,
+  Icon,
+}: MenuItemProps) => {
+  return (
+    <Link
+      id={id}
+      href={url}
+      className={cn(
+        "flex px-4.75 py-4 gap-4 items-center text-sm relative",
+        "hover:bg-secondary/40",
+        "before:absolute before:inset-0 before:bg-transparent before:border-x-3  before:border-transparent before:pointer-events-none transition-all duration-100",
+        {
+          "bg-secondary before:border-primary": isActive,
+          "flex-1": !isFull,
+        },
+      )}
+    >
+      <Icon size={20} />
+      <AnimatePresence>
+        {isFull && (
+          <motion.span
+            className={cn("overflow-hidden", {
+              "hidden opacity-0 pointer-events-none": isMobile,
+            })}
+            initial={{
+              width: "100%",
+            }}
+            exit={{
+              width: 0,
+            }}
+            transition={{
+              duration: 0.3,
+            }}
+          >
+            {title}
+          </motion.span>
+        )}
+      </AnimatePresence>
+    </Link>
+  );
+};
+
+interface ResumeButtonProps {
+  isFull: boolean;
+}
+
+const ResumeButton = ({ isFull }: ResumeButtonProps) => {
+  return (
+    <Link
+      href={RESUME_HREF}
+      download
+      className={cn(
+        "flex items-center gap-4 rounded-sm px-4.75 py-4 text-sm font-primary uppercase tracking-wider bg-secondary/50 hover:bg-secondary/80 transition-colors duration-75",
+        {
+          "justify-center px-2": !isFull,
+        },
+      )}
+    >
+      <ArrowDownTrayIcon size={18} />
+      <AnimatePresence>
+        {isFull && (
+          <motion.span
+            className="overflow-hidden whitespace-nowrap"
+            initial={{
+              width: "100%",
+            }}
+            exit={{
+              width: 0,
+            }}
+            transition={{
+              duration: 0.3,
+            }}
+          >
+            Resume
+          </motion.span>
+        )}
+      </AnimatePresence>
+    </Link>
   );
 };
 

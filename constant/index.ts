@@ -6,8 +6,9 @@ import {
   SkillsIcon,
   UserIcon,
 } from "@/components/icons";
+import { SidebarMenuItemInterface } from "@/types";
 
-export const SIDEBAR_MENU_LIST = [
+export const SIDEBAR_MENU_LIST: Array<SidebarMenuItemInterface> = [
   {
     id: "home",
     title: "Home",
