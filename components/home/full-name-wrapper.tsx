@@ -14,7 +14,7 @@ const FullNameWrapper = ({
   return (
     <h1
       className={cn(
-        "text-4xl sm:text-5xl lg:text-7xl font-primary font-bold text-foreground leading-[1.1] tracking-tight",
+        "text-3xl sm:text-5xl lg:text-7xl font-primary font-bold text-foreground leading-[1.1] tracking-tight",
         {
           "md:text-5xl lg:text-[58px] xl:text:7xl": isCollapsedMain,
         },

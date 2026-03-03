@@ -136,7 +136,7 @@ const DesktopMenu = () => {
               href={RESUME_HREF}
               download
               className={cn(
-                "flex items-center gap-3 rounded-sm px-4.75 py-4 text-sm font-primary uppercase tracking-wider hover:bg-secondary/40 transition-colors",
+                "flex items-center gap-4 rounded-sm px-4.75 py-4 text-sm font-primary uppercase tracking-wider hover:bg-secondary/40 transition-colors",
                 {
                   "justify-center px-2": !isFull,
                 },

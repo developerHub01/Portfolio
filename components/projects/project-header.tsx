@@ -23,7 +23,7 @@ const ProjectHeader = ({ index, subtitle, title, year }: Props) => {
         <span className="text-[10px] sm:text-xs font-mono text-muted-foreground uppercase truncate line-clamp-2">
           {subtitle}
         </span>
-        <h2 className="text-2xl sm:text-3xl xl:text-4xl font-primary font-black text-foreground truncate line-clamp-2">
+        <h2 className="text-xl sm:text-3xl xl:text-4xl font-primary font-black text-foreground truncate line-clamp-2">
           {title}
         </h2>
       </div>

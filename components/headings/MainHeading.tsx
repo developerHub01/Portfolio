@@ -9,7 +9,7 @@ const MainHeading = ({
   return (
     <h1
       className={cn(
-        "text-3xl md:text-4xl font-primary font-black pl-2 border-l-6 border-primary leading-none capitalize",
+        "text-2xl sm:text-3xl md:text-4xl font-primary font-black pl-2 border-l-6 border-primary leading-none capitalize",
         className,
       )}
       {...props}

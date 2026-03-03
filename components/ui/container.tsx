@@ -7,7 +7,7 @@ const Container = ({
   ...props
 }: ComponentProps<"section">) => {
   return (
-    <section className={cn("container px-2 mx-auto", className)} {...props}>
+    <section className={cn("container mx-auto", className)} {...props}>
       {children}
     </section>
   );
