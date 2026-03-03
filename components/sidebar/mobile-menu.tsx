@@ -30,7 +30,7 @@ const MobileMenu = () => {
       {show && (
         <motion.div
           key="overlay"
-          className="bg-background/50 fixed inset-0"
+          className="bg-background/50 fixed inset-0 z-999"
           initial={{
             opacity: 0,
             backdropFilter: "blur(0px)",
@@ -51,7 +51,7 @@ const MobileMenu = () => {
       )}
       <motion.aside
         key="sidebar"
-        className="fixed top-0 left-0 h-full w-60 grow-0 shrink-0 flex flex-col bg-sidebar border-r-2"
+        className="fixed top-0 left-0 h-full w-60 grow-0 shrink-0 flex flex-col bg-sidebar border-r-2 z-999"
         initial={{
           x: "-100%",
         }}
