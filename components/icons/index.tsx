@@ -267,3 +267,21 @@ export const YouTubeIcon = (props: IconProps) => {
     </Icon>
   );
 };
+
+export const FacebookIcon = (props: IconProps) => {
+  return (
+    <Icon {...props} strokeWidth={2.3}>
+      <path d="M6.5 9.5v4h3.5V21h4v-7.5h3.2l1-4H14V7.8a1.3 1.3 0 0 1 1.3-1.3H18V3h-2.7A5.3 5.3 0 0 0 10 8.3v1.2z" />
+    </Icon>
+  );
+};
+
+export const InstagramIcon = (props: IconProps) => {
+  return (
+    <Icon {...props} strokeWidth={2.3}>
+      <path d="M3 7.5A4.5 4.5 0 0 1 7.5 3h9A4.5 4.5 0 0 1 21 7.5v9a4.5 4.5 0 0 1-4.5 4.5h-9A4.5 4.5 0 0 1 3 16.5z" />
+      <circle cx="12" cy="12" r="3.8" />
+      <path d="M17.2 6.8h.01" />
+    </Icon>
+  );
+};

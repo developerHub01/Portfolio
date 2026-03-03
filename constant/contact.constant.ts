@@ -1,6 +1,8 @@
 import {
   EnvelopeIcon,
+  FacebookIcon,
   GithubIcon,
+  InstagramIcon,
   LinkedinIcon,
   PhoneIcon,
 } from "@/components/icons";
@@ -37,6 +39,22 @@ export const CONTACT_METHODS: Array<ContactMethodInterface> = [
     value: "github.com/developerHub01",
     href: "https://github.com/developerHub01",
     Icon: GithubIcon,
+    external: true,
+  },
+  {
+    id: "facebook",
+    label: "Facebook",
+    value: "facebook.com/abdusshohid.shakil.5",
+    href: "https://www.facebook.com/abdusshohid.shakil.5",
+    Icon: FacebookIcon,
+    external: true,
+  },
+  {
+    id: "instagram",
+    label: "Instagram",
+    value: "instagram.com/shakil102043",
+    href: "https://www.instagram.com/shakil102043/",
+    Icon: InstagramIcon,
     external: true,
   },
 ];
