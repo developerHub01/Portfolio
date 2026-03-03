@@ -113,7 +113,7 @@ const MobileMenu = () => {
           <Link
             href={RESUME_HREF}
             download
-            className="flex items-center gap-4 px-4.75 py-4 text-sm font-primary uppercase tracking-wider hover:bg-secondary/40 transition-colors"
+            className="flex items-center gap-4 px-4.75 py-4 text-sm font-primary uppercase tracking-wider bg-secondary/50 hover:bg-secondary/80 transition-colors duration-75"
           >
             <ArrowDownTrayIcon size={18} />
             <span className="flex-1">Download Resume</span>

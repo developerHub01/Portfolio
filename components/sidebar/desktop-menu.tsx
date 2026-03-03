@@ -25,7 +25,7 @@ const DesktopMenu = () => {
   return (
     <motion.aside
       className={cn(
-        "w-60 grow-0 flex flex-col bg-sidebar select-none border-r-2",
+        "w-60 grow-0 flex flex-col bg-sidebar select-none border-r-2 overflow-hidden",
         {
           "w-15.5": !isFull,
         },
@@ -58,7 +58,7 @@ const DesktopMenu = () => {
           <HamburgerIcon size={25} />
         </motion.button>
         <AnimatePresence>
-          {isFull && (
+          {isOpen && (
             <motion.span
               layout
               initial={{
@@ -70,7 +70,9 @@ const DesktopMenu = () => {
               transition={{
                 duration: 0.3,
               }}
-              className="whitespace-nowrap overflow-hidden"
+              className={cn("whitespace-nowrap overflow-hidden", {
+                "hidden opacity-0 pointer-events-none": isMobile,
+              })}
             >
               <Link href={"/"} className="flex-1 select-none">
                 Shakil
@@ -100,9 +102,11 @@ const DesktopMenu = () => {
                   >
                     <Icon size={20} />
                     <AnimatePresence>
-                      {isFull && (
+                      {isOpen && (
                         <motion.span
-                          className="overflow-hidden"
+                          className={cn("overflow-hidden", {
+                            "hidden opacity-0 pointer-events-none": isMobile,
+                          })}
                           initial={{
                             width: "100%",
                           }}
@@ -136,7 +140,7 @@ const DesktopMenu = () => {
               href={RESUME_HREF}
               download
               className={cn(
-                "flex items-center gap-4 rounded-sm px-4.75 py-4 text-sm font-primary uppercase tracking-wider hover:bg-secondary/40 transition-colors",
+                "flex items-center gap-4 rounded-sm px-4.75 py-4 text-sm font-primary uppercase tracking-wider bg-secondary/50 hover:bg-secondary/80 transition-colors duration-75",
                 {
                   "justify-center px-2": !isFull,
                 },
@@ -144,7 +148,7 @@ const DesktopMenu = () => {
             >
               <ArrowDownTrayIcon size={18} />
               <AnimatePresence>
-                {isFull && (
+                {isOpen && (
                   <motion.span
                     className="overflow-hidden whitespace-nowrap"
                     initial={{
