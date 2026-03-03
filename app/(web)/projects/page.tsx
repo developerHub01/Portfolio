@@ -11,7 +11,7 @@ import ProjectLeftWrapper from "@/components/projects/project-left-wrapper";
 
 export default function Page() {
   return (
-    <div className="w-full h-full p-5 lg:p-10 overflow-y-auto">
+    <div className="w-full h-full p-5 lg:p-10">
       <Container className="flex flex-col gap-12 pb-16">
         <MainHeading>Projects</MainHeading>
         <div className="flex flex-col gap-16">

@@ -5,7 +5,7 @@ import { ArrowRightIcon } from "@/components/icons";
 
 const NotFound = () => {
   return (
-    <div className="w-full h-full p-5 lg:p-10 overflow-y-auto">
+    <div className="w-full h-full p-5 lg:p-10">
       <Container className="min-h-full flex items-center justify-center">
         <FrameV1 className="opacity-100 w-full max-w-4xl">
           <section className="bg-secondary/50 border-4 border-border/20 shadow-awesome1 p-6 sm:p-10 lg:p-14 flex flex-col gap-8">

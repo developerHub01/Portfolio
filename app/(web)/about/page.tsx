@@ -7,7 +7,7 @@ import PersonalInfoWrapper from "@/components/about/personal-info-wrapper";
 
 const Page = () => {
   return (
-    <div className="w-full h-full p-5 lg:p-10 overflow-y-auto">
+    <div className="w-full h-full p-5 lg:p-10">
       <Container className="flex flex-col gap-12 pb-16">
         <MainHeading>About Me</MainHeading>
 
