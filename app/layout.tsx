@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import SplashScreen from "@/components/ui/splash-screen";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -47,9 +48,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          {/* <SplashScreen /> */}
           <TooltipProvider>{children}</TooltipProvider>
+          <section id="portal-root"></section>
         </ThemeProvider>
-        <section id="portal-root"></section>
         <SpeedInsights />
       </body>
     </html>
