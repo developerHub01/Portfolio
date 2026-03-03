@@ -24,9 +24,12 @@ const DesktopMenu = () => {
 
   return (
     <motion.aside
-      className={cn("w-60 grow-0 flex flex-col bg-sidebar border-r-2", {
-        "w-15.5": !isFull,
-      })}
+      className={cn(
+        "w-60 grow-0 flex flex-col bg-sidebar select-none border-r-2",
+        {
+          "w-15.5": !isFull,
+        },
+      )}
       animate={{
         width: isFull ? 240 : 60,
       }}
