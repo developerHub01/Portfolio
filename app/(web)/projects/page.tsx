@@ -21,7 +21,7 @@ export default function Page() {
               className="opacity-0 group-hover:opacity-100"
             >
               <div className="bg-secondary p-8 sm:p-10 flex flex-col lg:flex-row gap-8 xl:gap-12 shadow-awesome1">
-                {/* Left Column: Image + (Stack on lg) */}
+                {/* Left Column */}
                 <ProjectLeftWrapper>
                   <ProjectGallery
                     images={project.images}
@@ -36,7 +36,7 @@ export default function Page() {
                   </div>
                 </ProjectLeftWrapper>
 
-                {/* Right Column: Info + Features + (Stack on mobile) + Links (Always) */}
+                {/* Right Column */}
                 <div className="flex flex-col gap-8 flex-1 min-w-0">
                   <ProjectHeader
                     index={index}

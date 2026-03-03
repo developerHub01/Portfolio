@@ -33,7 +33,7 @@ const Page = () => {
           </div>
         </FrameV1>
 
-        {/* Personal Info Grid */}
+        {/* Personal Info */}
         <div className="flex flex-col gap-6">
           <SecondaryHeading>Info</SecondaryHeading>
 
