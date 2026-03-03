@@ -1,4 +1,6 @@
 import nodemailer from "nodemailer";
+import ejs from "ejs";
+import path from "node:path";
 import { contactSchema } from "@/schema";
 import { apiSuccess } from "@/lib/api-response";
 import { getRequiredEnv } from "@/lib/env";
@@ -10,6 +12,21 @@ export const POST = withApiHandler(async (request: Request) => {
 
   const mailUser = getRequiredEnv("GMAIL_APP_MAIL");
   const mailPassword = getRequiredEnv("GMAIL_APP_PASSWORD");
+  const templatePath = path.join(
+    process.cwd(),
+    "lib",
+    "email-templates",
+    "contact-email.ejs"
+  );
+
+  const sentAt = new Date().toISOString().replace("T", " ").replace("Z", " UTC");
+
+  const html = await ejs.renderFile(templatePath, {
+    name: payload.name,
+    email: payload.email,
+    message: payload.message,
+    sentAt,
+  });
 
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
@@ -25,13 +42,16 @@ export const POST = withApiHandler(async (request: Request) => {
     from: `"${payload.name}" <${mailUser}>`,
     replyTo: payload.email,
     to: mailUser,
-    subject: `Portfolio contact from ${payload.name}`,
+    subject: `Portfolio, client ${payload.name}`,
     text: `Name: ${payload.name}\nEmail: ${payload.email}\n\n${payload.message}`,
-    html: `<p><strong>Name:</strong> ${payload.name}</p><p><strong>Email:</strong> ${payload.email}</p><p><strong>Message:</strong><br/>${payload.message.replace(/\n/g, "<br/>")}</p>`,
+    html,
   });
 
-  return apiSuccess("Email sent successfully", {
-    sent: true
-  }, 200);
+  return apiSuccess(
+    "Email sent successfully",
+    {
+      sent: true,
+    },
+    200
+  );
 });
-
