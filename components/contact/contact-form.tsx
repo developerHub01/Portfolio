@@ -7,6 +7,8 @@ import { contactSchema } from "@/schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, useForm } from "react-hook-form";
 import { Field, FieldError } from "@/components/ui/field";
+import { Spinner } from "@/components/ui/spinner";
+import { cn } from "@/lib/utils";
 
 interface FormInterface {
   name: string;
@@ -27,6 +29,7 @@ interface ApiResponse {
 const ContactForm = () => {
   const [submitMessage, setSubmitMessage] = useState<string>("");
   const [isSubmitError, setIsSubmitError] = useState<boolean>(false);
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const form = useForm<FormInterface>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
@@ -37,8 +40,11 @@ const ContactForm = () => {
   });
 
   const handleSubmit = async (data: FormInterface) => {
+    if (isSubmitting) return;
+
     setSubmitMessage("");
     setIsSubmitError(false);
+    setIsSubmitting(true);
 
     const response = await fetch("/api/send-email", {
       method: "POST",
@@ -50,6 +56,7 @@ const ContactForm = () => {
     });
 
     const result = (await response.json()) as ApiResponse;
+    setIsSubmitting(false);
 
     if (!response.ok || !result.success) {
       const firstFieldError = result.details?.fieldErrors
@@ -156,15 +163,22 @@ const ContactForm = () => {
         </div>
         <button
           type="submit"
-          className="self-start inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 font-primary font-bold text-base hover:bg-primary/90 transition-all duration-300 cursor-pointer shadow-awesome1 group/send"
+          disabled={isSubmitting}
+          className={cn(
+            "self-start inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 font-primary font-bold text-base hover:bg-primary/90 transition-all duration-300 cursor-pointer shadow-awesome1 group/send",
+            {
+              "opacity-80 pointer-events-none": isSubmitting,
+            },
+          )}
         >
+          {isSubmitting && <Spinner />}
           <span>Send Message</span>
           <PaperAirplaneIcon
             size={20}
             className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
           />
         </button>
-        {submitMessage ? (
+        {Boolean(submitMessage) && (
           <p
             className={
               isSubmitError ? "text-red-500 text-sm" : "text-green-500 text-sm"
@@ -172,7 +186,7 @@ const ContactForm = () => {
           >
             {submitMessage}
           </p>
-        ) : null}
+        )}
       </form>
     </FrameV1>
   );
