@@ -58,7 +58,7 @@ const DesktopMenu = () => {
           <HamburgerIcon size={25} />
         </motion.button>
         <AnimatePresence>
-          {isOpen && (
+          {isFull && (
             <motion.span
               layout
               initial={{
@@ -102,7 +102,7 @@ const DesktopMenu = () => {
                   >
                     <Icon size={20} />
                     <AnimatePresence>
-                      {isOpen && (
+                      {isFull && (
                         <motion.span
                           className={cn("overflow-hidden", {
                             "hidden opacity-0 pointer-events-none": isMobile,
@@ -123,7 +123,7 @@ const DesktopMenu = () => {
                     </AnimatePresence>
                   </Link>
                 </TooltipTrigger>
-                {isOpen || (
+                {isFull || (
                   <TooltipContent side="right" align="center">
                     <p>{title}</p>
                   </TooltipContent>
@@ -148,7 +148,7 @@ const DesktopMenu = () => {
             >
               <ArrowDownTrayIcon size={18} />
               <AnimatePresence>
-                {isOpen && (
+                {isFull && (
                   <motion.span
                     className="overflow-hidden whitespace-nowrap"
                     initial={{
@@ -167,7 +167,7 @@ const DesktopMenu = () => {
               </AnimatePresence>
             </Link>
           </TooltipTrigger>
-          {isOpen || (
+          {isFull || (
             <TooltipContent side="right" align="center">
               <p>Download Resume</p>
             </TooltipContent>
