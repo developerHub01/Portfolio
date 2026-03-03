@@ -19,7 +19,7 @@ const ProjectLinks = ({ links }: Props) => {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group/link inline-flex items-center gap-2 text-[10px] font-mono font-bold text-foreground bg-accent/20 px-3 py-2 border border-border/40 hover:border-primary/40 hover:text-primary transition-all duration-300 shadow-awesome-light uppercase"
+            className="group/link inline-flex items-center gap-2 text-[10px] font-mono font-bold text-foreground bg-accent/20 px-3 py-2 border border-border/40 hover:border-primary/40 hover:text-primary transition-all duration-300 shadow-awesome-light uppercase select-none"
           >
             {link.type === "github" ? (
               <GithubIcon

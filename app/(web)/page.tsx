@@ -30,14 +30,14 @@ const HomePage = () => {
           <div className="flex flex-wrap items-center gap-4">
             <Link
               href="/projects"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 font-primary font-bold text-xs lg:text-sm shadow-awesome1 transition-colors hover:bg-primary/90 uppercase tracking-widest border-2 border-primary"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 font-primary font-bold text-xs lg:text-sm shadow-awesome1 transition-colors hover:bg-primary/90 uppercase tracking-widest border-2 border-primary select-none"
             >
               <span>View Projects</span>
               <ArrowRightIcon size={16} />
             </Link>
             <Link
               href="/contact"
-              className="px-6 py-3 font-primary font-bold text-xs lg:text-sm border-2 border-border/40 transition-colors hover:bg-accent hover:border-border/60 shadow-awesome1 uppercase tracking-widest"
+              className="px-6 py-3 font-primary font-bold text-xs lg:text-sm border-2 border-border/40 transition-colors hover:bg-accent hover:border-border/60 shadow-awesome1 uppercase tracking-widest select-none"
             >
               Contact Me
             </Link>
