@@ -1,11 +1,11 @@
-import { ComponentProps } from "react";
-import { Icon } from "@/components/icons/Icon";
+import { ComponentType } from "react";
+import { IconProps } from "@/components/icons";
 
 export interface ContactMethodInterface {
   id: string;
   label: string;
   value: string;
   href: string;
-  Icon: (props: ComponentProps<typeof Icon>) => React.JSX.Element;
+  Icon: ComponentType<IconProps>;
   external: boolean;
 }
