@@ -13,7 +13,9 @@ const Layout = ({ children }: Props) => {
         <Sidebar />
         <section className="flex-1 bg-background h-full">
           <ScrollArea className="w-full h-full min-h-0 [&>div>div]:h-full">
-            <div className="w-full h-screen min-h-0">{children}</div>
+            <div className="w-full min-h-screen flex *:flex-1 *:h-auto">
+              {children}
+            </div>
           </ScrollArea>
         </section>
       </main>
