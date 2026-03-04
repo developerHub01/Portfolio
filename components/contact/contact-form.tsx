@@ -75,7 +75,7 @@ const ContactForm = () => {
   return (
     <FrameV1 className="opacity-0 group-hover:opacity-100">
       <form
-        className="bg-secondary/30 p-5 sm:p-10 flex flex-col gap-6 shadow-awesome1 border border-border/30"
+        className="bg-secondary p-5 sm:p-10 flex flex-col gap-6 shadow-awesome1 border border-border/30"
         onSubmit={form.handleSubmit(handleSubmit)}
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

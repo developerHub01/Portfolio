@@ -39,7 +39,7 @@ const HomePage = () => {
             </Link>
             <Link
               href="/contact"
-              className="px-4 py-2 sm:px-6 sm:py-3 font-primary font-bold text-xs lg:text-sm border-2 border-border/40 transition-colors hover:bg-accent hover:border-border/60 shadow-awesome1 uppercase tracking-widest select-none"
+              className="px-4 py-2 sm:px-6 sm:py-3 font-primary font-bold text-xs lg:text-sm border-2 border-border/40 transition-colors hover:bg-accent hover:border-border/60 shadow-awesome1 uppercase tracking-widest select-none bg-secondary"
             >
               Contact Me
             </Link>
@@ -65,7 +65,7 @@ const HomePage = () => {
             </FrameV1>
 
             <FrameV1 className="opacity-100">
-              <div className="bg-secondary/40 p-2 md:p-4 border-4 border-border/10 shadow-awesome1 grid grid-cols-5 gap-2">
+              <div className="bg-secondary p-2 md:p-4 border-4 border-border/10 shadow-awesome1 grid grid-cols-5 gap-2">
                 {SOCIALS.map(social => {
                   return (
                     <Link
@@ -77,7 +77,7 @@ const HomePage = () => {
                     >
                       <AspectRatio
                         ratio={1}
-                        className="p-0 md:p-3 w-full text-muted-foreground hover:text-primary hover:bg-accent transition-all duration-300 shadow-awesome-light border border-transparent hover:border-border/40 grid place-items-center"
+                        className="p-0 md:p-3 w-full text-muted-foreground hover:text-primary bg-accent/10 hover:bg-accent transition-all duration-300 shadow-awesome-light border border-transparent hover:border-border/40 grid place-items-center"
                       >
                         <social.Icon className="size-4 sm:size-5" />
                       </AspectRatio>

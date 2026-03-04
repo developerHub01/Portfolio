@@ -1,6 +1,6 @@
 import MainHeading from "@/components/headings/MainHeading";
 import FrameV1 from "@/components/ui/frame-v1";
-import ProjectGallery from "@/components/projects/project-gallery";
+import ProjectGallery from "@/components/projects/project-gallery/project-gallery";
 import { PROJECTS } from "@/constant/projects.constant";
 import ProjectTechStack from "@/components/projects/project-teach-stack";
 import ProjectHeader from "@/components/projects/project-header";
@@ -8,6 +8,7 @@ import ProjectFeatures from "@/components/projects/project-features";
 import ProjectLinks from "@/components/projects/project-links";
 import ProjectLeftWrapper from "@/components/projects/project-left-wrapper";
 import PageWrapper from "@/components/ui/page-wrapper";
+import ProjectGalleryProvider from "@/context/project-gallery-prodiver";
 
 export default function Page() {
   return (
@@ -22,7 +23,15 @@ export default function Page() {
             <div className="bg-secondary p-5 sm:p-10 flex flex-col lg:flex-row gap-8 xl:gap-12 shadow-awesome1">
               {/* Left Column */}
               <ProjectLeftWrapper>
-                <ProjectGallery images={project.images} title={project.title} />
+                <ProjectGalleryProvider
+                  images={project.images}
+                  title={project.title}
+                >
+                  <ProjectGallery
+                    images={project.images}
+                    title={project.title}
+                  />
+                </ProjectGalleryProvider>
 
                 {/* Desktop Only Stack */}
                 <div className="hidden lg:flex flex-col gap-6">
