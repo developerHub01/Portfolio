@@ -3,6 +3,8 @@ export interface TechItemInterface {
   label: string;
 }
 
+export type ProjectLinkType = "github" | "external" | "video";
+
 export interface ProjectDataInterface {
   id: string;
   title: string;
@@ -15,6 +17,6 @@ export interface ProjectDataInterface {
   links: Array<{
     label: string;
     url: string;
-    type: "github" | "external";
+    type: ProjectLinkType;
   }>;
 }

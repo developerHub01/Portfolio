@@ -30,18 +30,15 @@ const MobileMenu = () => {
       {show && (
         <motion.div
           key="overlay"
-          className="bg-background/50 fixed inset-0 z-999"
+          className="bg-background/50 fixed inset-0 z-999 backdrop-blur-md"
           initial={{
             opacity: 0,
-            backdropFilter: "blur(0px)",
           }}
           animate={{
             opacity: show ? 1 : 0,
-            backdropFilter: show ? "blur(5px)" : "blur(0px)",
           }}
           exit={{
             opacity: 0,
-            backdropFilter: "blur(0px)",
             transition: {
               delay: 0.2,
             },

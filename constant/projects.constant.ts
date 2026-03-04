@@ -67,8 +67,8 @@ export const PROJECTS: Array<ProjectDataInterface> = [
       },
       {
         label: "Video Demo",
-        url: "https://youtu.be/u2t3AvMtXXI?si=WD3oeDaWIJ4uEpTB",
-        type: "external",
+        url: "https://www.youtube.com/embed/u2t3AvMtXXI",
+        type: "video",
       },
     ],
   },
