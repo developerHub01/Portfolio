@@ -16,9 +16,11 @@ export default function Page() {
   return (
     <PageWrapper>
       <MainHeading>Projects</MainHeading>
-      <div className="flex flex-col gap-16">
+      <div className="flex flex-col gap-10 sm:gap-16">
         {PROJECTS.map((project, index) => {
-          const projectVideoLink = project.links.find(link => link.type === "video");
+          const projectVideoLink = project.links.find(
+            link => link.type === "video",
+          );
           return (
             <FrameV1
               key={project.id}
@@ -26,56 +28,58 @@ export default function Page() {
             >
               <ProjectVideoProvider
                 videoUrl={projectVideoLink?.url ?? ""}
-                videoTitle={projectVideoLink?.label ?? `${project.title} video demo`}
+                videoTitle={
+                  projectVideoLink?.label ?? `${project.title} video demo`
+                }
               >
-              <div className="bg-secondary p-5 sm:p-10 flex flex-col lg:flex-row gap-8 xl:gap-12 shadow-awesome-dark">
-                {/* Left Column */}
-                <ProjectLeftWrapper>
-                  <ProjectGalleryProvider
-                    images={project.images}
-                    title={project.title}
-                  >
-                    <ProjectGallery
+                <div className="bg-secondary p-5 sm:p-10 flex flex-col lg:flex-row gap-8 xl:gap-12 shadow-awesome-dark">
+                  {/* Left Column */}
+                  <ProjectLeftWrapper>
+                    <ProjectGalleryProvider
                       images={project.images}
                       title={project.title}
+                    >
+                      <ProjectGallery
+                        images={project.images}
+                        title={project.title}
+                      />
+                    </ProjectGalleryProvider>
+
+                    {/* Desktop Only Stack */}
+                    <div className="hidden lg:flex flex-col gap-6">
+                      <ProjectTechStack techStack={project.techStack} />
+                      <div className="h-px bg-border/20 mt-auto" />
+                      <ProjectLinks links={project.links} />
+                    </div>
+                  </ProjectLeftWrapper>
+
+                  {/* Right Column */}
+                  <div className="flex flex-col gap-8 flex-1 min-w-0">
+                    <ProjectHeader
+                      index={index}
+                      subtitle={project.subtitle}
+                      title={project.title}
+                      year={project.year}
                     />
-                  </ProjectGalleryProvider>
 
-                  {/* Desktop Only Stack */}
-                  <div className="hidden lg:flex flex-col gap-6">
-                    <ProjectTechStack techStack={project.techStack} />
-                    <div className="h-px bg-border/20 mt-auto" />
-                    <ProjectLinks links={project.links} />
-                  </div>
-                </ProjectLeftWrapper>
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                      {project.description}
+                    </p>
 
-                {/* Right Column */}
-                <div className="flex flex-col gap-8 flex-1 min-w-0">
-                  <ProjectHeader
-                    index={index}
-                    subtitle={project.subtitle}
-                    title={project.title}
-                    year={project.year}
-                  />
-
-                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                    {project.description}
-                  </p>
-
-                  <div className="h-px bg-border/20" />
-
-                  <ProjectFeatures features={project.features} />
-
-                  {/* Mobile Only Stack */}
-                  <div className="flex lg:hidden flex-col gap-6">
                     <div className="h-px bg-border/20" />
-                    <ProjectTechStack techStack={project.techStack} />
-                    <div className="h-px bg-border/20 mt-auto" />
-                    <ProjectLinks links={project.links} />
+
+                    <ProjectFeatures features={project.features} />
+
+                    {/* Mobile Only Stack */}
+                    <div className="flex lg:hidden flex-col gap-6">
+                      <div className="h-px bg-border/20" />
+                      <ProjectTechStack techStack={project.techStack} />
+                      <div className="h-px bg-border/20 mt-auto" />
+                      <ProjectLinks links={project.links} />
+                    </div>
                   </div>
                 </div>
-              </div>
-              <ProjectVideoLightbox />
+                <ProjectVideoLightbox />
               </ProjectVideoProvider>
             </FrameV1>
           );
