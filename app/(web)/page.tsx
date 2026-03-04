@@ -77,7 +77,7 @@ const HomePage = () => {
                     >
                       <AspectRatio
                         ratio={1}
-                        className="p-0 w-full text-muted-foreground bg-accent hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-awesome-light border border-transparent hover:border-border/40 flex justify-center items-center"
+                        className="p-0 w-full text-primary bg-accent hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-awesome-light border border-transparent hover:border-border/40 flex justify-center items-center"
                       >
                         <social.Icon className="size-4 sm:size-5" />
                       </AspectRatio>

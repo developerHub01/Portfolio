@@ -7,6 +7,7 @@ export const Icon = ({
   size = 24,
   strokeWidth = 2,
   className,
+  fill="none",
   ...props
 }: IconProps) => {
   return (
@@ -16,12 +17,12 @@ export const Icon = ({
       height={size}
       viewBox="0 0 24 24"
       color={color}
-      fill="none"
+      fill={fill}
       stroke={color}
       strokeWidth={strokeWidth}
       strokeLinecap="round"
       strokeLinejoin="round"
-      className={cn("shrink-0", className)}
+      className={cn("shrink-0 overflow-visible", className)}
       {...props}
     >
       {children}

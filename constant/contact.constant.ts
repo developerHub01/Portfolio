@@ -7,6 +7,7 @@ import {
   LeetcodeIcon,
   LinkedinIcon,
   PhoneIcon,
+  WhatsappIcon,
   YouTubeIcon,
 } from "@/components/icons";
 import { ContactMethodInterface } from "@/types/contact.types";
@@ -33,8 +34,8 @@ export const CONTACT_METHODS: Array<ContactMethodInterface> = [
     label: "Whatsapp",
     value: "01703374162",
     href: "https://wa.me/01703374162",
-    Icon: PhoneIcon,
-    external: false,
+    Icon: WhatsappIcon,
+    external: true,
   },
   {
     id: "linkedin",
