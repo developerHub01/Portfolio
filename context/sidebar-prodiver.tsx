@@ -32,7 +32,12 @@ const SidebarProvider = ({ children }: SidebarProviderProps) => {
   );
 
   return (
-    <SidebarContext.Provider value={{ isOpen, handleToggleIsOpen }}>
+    <SidebarContext.Provider
+      value={{
+        isOpen,
+        handleToggleIsOpen,
+      }}
+    >
       {children}
     </SidebarContext.Provider>
   );

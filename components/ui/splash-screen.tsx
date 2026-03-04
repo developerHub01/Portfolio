@@ -30,24 +30,45 @@ const SplashScreen = ({
     <AnimatePresence>
       <motion.div
         className="fixed inset-0 z-9999 flex items-center justify-center overflow-hidden bg-background"
-        initial={{ opacity: 1 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.35 }}
+        initial={{
+          opacity: 1,
+        }}
+        animate={{
+          opacity: 1,
+        }}
+        exit={{
+          opacity: 0,
+        }}
+        transition={{
+          duration: 0.35,
+        }}
       >
         <BackgroundV1 className="absolute inset-0" />
 
         <motion.div
-          initial={{ opacity: 0, y: 20, scale: 0.96 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.45, ease: "easeOut" }}
+          initial={{
+            opacity: 0,
+            y: 20,
+            scale: 0.96,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            scale: 1,
+          }}
+          transition={{
+            duration: 0.45,
+            ease: "easeOut",
+          }}
           className="relative px-4"
         >
           <FrameV1 className="opacity-100">
             <div className="relative w-[min(92vw,560px)] border-2 border-border/30 bg-sidebar/90 backdrop-blur-sm px-6 py-8 sm:px-8 sm:py-10 shadow-awesome-dark overflow-hidden">
               <motion.div
                 className="pointer-events-none absolute -inset-x-12 top-0 h-px bg-linear-to-r from-transparent via-primary/70 to-transparent"
-                animate={{ x: [-140, 140] }}
+                animate={{
+                  x: [-140, 140],
+                }}
                 transition={{
                   duration: 1.8,
                   ease: "linear",
@@ -71,8 +92,12 @@ const SplashScreen = ({
                 {mode === "intro" ? (
                   <motion.div
                     className="h-full bg-primary"
-                    initial={{ width: "0%" }}
-                    animate={{ width: "100%" }}
+                    initial={{
+                      width: "0%",
+                    }}
+                    animate={{
+                      width: "100%",
+                    }}
                     transition={{
                       duration: durationMs / 1000,
                       ease: "easeInOut",
@@ -81,8 +106,12 @@ const SplashScreen = ({
                 ) : (
                   <motion.div
                     className="h-full w-1/3 bg-primary"
-                    initial={{ x: "-100%" }}
-                    animate={{ x: "300%" }}
+                    initial={{
+                      x: "-100%",
+                    }}
+                    animate={{
+                      x: "300%",
+                    }}
                     transition={{
                       duration: 1.1,
                       ease: "easeInOut",
