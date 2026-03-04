@@ -29,19 +29,19 @@ export const metadata: Metadata = {
       ? process.env.NEXT_PUBLIC_SITE_DEV_URL
       : process.env.NEXT_PUBLIC_SITE_PROD_URL)!,
   ),
-  title: "Shakil Software Developer",
+  title: "Abdus Shohid Shakil | Frontend-Focused Full-Stack Developer",
   description:
-    "Abdus Shohid Shakil, frontend focused fullstack js developer and complex frontend lover.",
+    "I build fast, polished web and desktop products with React, Next.js, Electron, and TypeScript, focused on clean UI, strong performance, and product-first execution.",
   openGraph: {
-    title: "Shakil Software Developer",
+    title: "Abdus Shohid Shakil | Frontend-Focused Full-Stack Developer",
     description:
-      "Abdus Shohid Shakil, frontend focused fullstack js developer and complex frontend lover.",
+      "I build fast, polished web and desktop products with React, Next.js, Electron, and TypeScript, focused on clean UI, strong performance, and product-first execution.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shakil Software Developer",
+    title: "Abdus Shohid Shakil | Frontend-Focused Full-Stack Developer",
     description:
-      "Abdus Shohid Shakil, frontend focused fullstack js developer and complex frontend lover.",
+      "I build fast, polished web and desktop products with React, Next.js, Electron, and TypeScript, focused on clean UI, strong performance, and product-first execution.",
   },
 };
 
