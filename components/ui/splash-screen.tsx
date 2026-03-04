@@ -44,9 +44,9 @@ const SplashScreen = ({
           className="relative px-4"
         >
           <FrameV1 className="opacity-100">
-            <div className="relative w-[min(92vw,560px)] border-2 border-border/30 bg-sidebar/90 backdrop-blur-sm px-6 py-8 sm:px-8 sm:py-10 shadow-awesome1 overflow-hidden">
+            <div className="relative w-[min(92vw,560px)] border-2 border-border/30 bg-sidebar/90 backdrop-blur-sm px-6 py-8 sm:px-8 sm:py-10 shadow-awesome-dark overflow-hidden">
               <motion.div
-                className="pointer-events-none absolute -inset-x-12 top-0 h-px bg-gradient-to-r from-transparent via-primary/70 to-transparent"
+                className="pointer-events-none absolute -inset-x-12 top-0 h-px bg-linear-to-r from-transparent via-primary/70 to-transparent"
                 animate={{ x: [-140, 140] }}
                 transition={{
                   duration: 1.8,

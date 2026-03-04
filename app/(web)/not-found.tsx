@@ -10,7 +10,7 @@ const NotFound = () => {
       <BackgroundV2 className="absolute inset-0 pointer-events-none" />
       <Container className="relative z-10 min-h-full flex items-center justify-center">
         <FrameV1 className="opacity-100 w-full max-w-4xl">
-          <section className="bg-secondary/50 border-4 border-border/20 shadow-awesome1 p-6 sm:p-10 lg:p-14 flex flex-col gap-8">
+          <section className="bg-secondary/50 border-4 border-border/20 shadow-awesome-dark p-6 sm:p-10 lg:p-14 flex flex-col gap-8">
             <div className="flex flex-col gap-3">
               <span className="text-primary font-mono text-sm font-bold tracking-[0.2em] uppercase">
                 Error
@@ -31,7 +31,7 @@ const NotFound = () => {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 font-primary font-bold text-xs lg:text-sm shadow-awesome1 transition-colors hover:bg-primary/90 uppercase tracking-widest border-2 border-primary"
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 font-primary font-bold text-xs lg:text-sm shadow-awesome-light transition-colors hover:bg-primary/90 uppercase tracking-widest border-2 border-primary"
               >
                 <span>Go Home</span>
                 <ArrowRightIcon size={16} />
@@ -39,7 +39,7 @@ const NotFound = () => {
 
               <Link
                 href="/projects"
-                className="px-6 py-3 font-primary font-bold text-xs lg:text-sm border-2 border-border/40 transition-colors hover:bg-accent hover:border-border/60 shadow-awesome1 uppercase tracking-widest"
+                className="px-6 py-3 font-primary font-bold text-xs lg:text-sm border-2 border-border/40 transition-colors hover:bg-accent hover:border-border/60 shadow-awesome-light uppercase tracking-widest"
               >
                 View Projects
               </Link>

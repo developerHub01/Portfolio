@@ -32,14 +32,14 @@ const HomePage = () => {
           <div className="flex flex-wrap items-center gap-4">
             <Link
               href="/projects"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 sm:px-6 sm:py-3 font-primary font-bold text-xs lg:text-sm shadow-awesome1 transition-colors hover:bg-primary/90 uppercase tracking-widest border-2 border-primary select-none"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 sm:px-6 sm:py-3 font-primary font-bold text-xs lg:text-sm shadow-awesome-light transition-colors hover:bg-primary/90 uppercase tracking-widest border-2 border-primary select-none"
             >
               <span>View Projects</span>
               <ArrowRightIcon size={16} />
             </Link>
             <Link
               href="/contact"
-              className="px-4 py-2 sm:px-6 sm:py-3 font-primary font-bold text-xs lg:text-sm border-2 border-border/40 transition-colors hover:bg-accent hover:border-border/60 shadow-awesome1 uppercase tracking-widest select-none bg-secondary"
+              className="px-4 py-2 sm:px-6 sm:py-3 font-primary font-bold text-xs lg:text-sm border-2 border-border/40 transition-colors hover:bg-accent hover:border-border/60 shadow-awesome-light uppercase tracking-widest select-none bg-secondary"
             >
               Contact Me
             </Link>
@@ -50,7 +50,7 @@ const HomePage = () => {
         <div className="flex flex-col gap-6 order-1 lg:order-2 shrink-0">
           <div className="w-full max-w-55 sm:max-w-60 md:max-w-70 lg:max-w-80 flex flex-col gap-3">
             <FrameV1 className="opacity-100">
-              <div className="relative w-full lg:h-85 bg-secondary overflow-hidden shadow-awesome1 border-4 border-border/20 group/photo">
+              <div className="relative w-full lg:h-85 bg-secondary overflow-hidden shadow-awesome-dark border-4 border-border/20 group/photo">
                 <Image
                   src="/home/shakil.png"
                   width={400}
@@ -65,7 +65,7 @@ const HomePage = () => {
             </FrameV1>
 
             <FrameV1 className="opacity-100">
-              <div className="bg-secondary p-2 md:p-4 border-4 border-border/10 shadow-awesome1 grid grid-cols-5 gap-2">
+              <div className="bg-secondary p-2 md:p-4 border-4 border-border/10 shadow-awesome-dark grid grid-cols-5 gap-2">
                 {SOCIALS.map(social => {
                   return (
                     <Link

@@ -5,7 +5,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@/components/icons";
 import { useCarousel } from "@/components/ui/carousel";
 
 const controlButtonClass =
-  "pointer-events-auto absolute top-1/2 z-20 flex size-6 -translate-y-1/2 items-center justify-center border border-border/60 bg-secondary text-foreground shadow-awesome1 backdrop-blur-sm transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-0 disabled:hover:bg-secondary/85 disabled:hover:text-foreground sm:size-7 md:size-8";
+  "pointer-events-auto absolute top-1/2 z-20 flex size-6 -translate-y-1/2 items-center justify-center border border-border/60 bg-secondary text-foreground shadow-awesome-light backdrop-blur-sm transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-0 disabled:hover:bg-secondary/85 disabled:hover:text-foreground sm:size-7 md:size-8";
 
 const ProjectCarouselControls = () => {
   const { scrollPrev, scrollNext, canScrollPrev, canScrollNext } =

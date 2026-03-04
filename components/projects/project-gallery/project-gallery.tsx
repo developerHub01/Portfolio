@@ -27,7 +27,7 @@ const ProjectGallery = ({ className, images, title, ...props }: Props) => {
         <AspectRatio
           ratio={16 / 9}
           onClick={() => handleChangeIsLightboxOpen(true)}
-          className="relative w-full overflow-hidden bg-accent/20 border border-border/50 shadow-awesome1 group/img cursor-zoom-in"
+          className="relative w-full overflow-hidden bg-accent/20 border border-border/50 shadow-awesome-dark group/img cursor-zoom-in"
         >
           <Image
             src={images[selectedIndex]}

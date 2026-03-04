@@ -8,10 +8,10 @@ const Page = () => {
     <PageWrapper>
       <MainHeading>Education</MainHeading>
       <FrameV1 className="opacity-0 group-hover:opacity-100">
-        <div className="bg-secondary p-5 sm:p-10 flex flex-col gap-8 shadow-awesome1 border border-border/30">
+        <div className="bg-secondary p-5 sm:p-10 flex flex-col gap-8 shadow-awesome-dark border border-border/30">
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-4">
-              <div className="p-3 bg-accent text-primary shadow-awesome1">
+              <div className="p-3 bg-accent text-primary shadow-awesome-light">
                 <AcademicCapIcon size={24} />
               </div>
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-primary font-black text-foreground leading-tight">

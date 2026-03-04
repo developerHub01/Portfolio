@@ -33,7 +33,7 @@ const ProjectCarousel = () => {
             <AspectRatio
               ratio={16 / 9}
               className={cn(
-                "relative w-full border transition-all duration-200 shadow-awesome1",
+                "relative w-full border transition-all duration-200 shadow-awesome-light",
                 selectedIndex === idx
                   ? "border-primary opacity-100 scale-105"
                   : "border-border/50 opacity-50 hover:opacity-100",

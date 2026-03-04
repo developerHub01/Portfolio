@@ -11,7 +11,7 @@ const Page = () => {
       <MainHeading>About Me</MainHeading>
       {/* Bio */}
       <FrameV1 className="opacity-0 group-hover:opacity-100">
-        <div className="bg-secondary p-5 sm:p-10 flex flex-col gap-6 shadow-awesome1 transition-all duration-300">
+        <div className="bg-secondary p-5 sm:p-10 flex flex-col gap-6 shadow-awesome-dark transition-all duration-300">
           <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-muted-foreground max-w-2xl">
             I&apos;m{" "}
             <span className="text-foreground font-medium">
@@ -41,7 +41,7 @@ const Page = () => {
               key={info.label}
               className="opacity-0 group-hover:opacity-100"
             >
-              <div className="bg-secondary p-4 sm:p-6 flex flex-col gap-2 shadow-awesome1 hover:bg-accent transition-all duration-300 md:group-has-[:hover]/container:not-hover:blur-xs hover:blur-none border border-border/30 h-full">
+              <div className="bg-secondary p-4 sm:p-6 flex flex-col gap-2 shadow-awesome-light hover:bg-accent transition-all duration-300 md:group-has-[:hover]/container:not-hover:blur-xs hover:blur-none border border-border/30 h-full">
                 <span className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest font-bold">
                   {info.label}
                 </span>

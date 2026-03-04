@@ -26,8 +26,8 @@ const Page = () => {
               className="group/card"
             >
               <FrameV1 className="opacity-0 group-hover/card:opacity-100">
-                <div className="bg-secondary p-5 sm:p-8 flex items-center gap-5 shadow-awesome1 hover:bg-accent transition-all duration-300 h-full md:group-has-[:hover]/container:not-hover:blur-xs hover:blur-none border border-border/30">
-                  <div className="p-4 bg-accent text-primary shrink-0 group-hover/card:bg-primary group-hover/card:text-primary-foreground transition-colors duration-300 shadow-awesome1">
+                <div className="bg-secondary p-5 sm:p-8 flex items-center gap-5 shadow-awesome-light hover:bg-accent transition-all duration-300 h-full md:group-has-[:hover]/container:not-hover:blur-xs hover:blur-none border border-border/30">
+                  <div className="p-4 bg-accent text-primary shrink-0 group-hover/card:bg-primary group-hover/card:text-primary-foreground transition-colors duration-300 shadow-awesome-light">
                     <method.Icon size={24} />
                   </div>
                   <div className="flex flex-col gap-1.5 min-w-0">

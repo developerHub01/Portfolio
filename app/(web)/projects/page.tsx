@@ -20,7 +20,7 @@ export default function Page() {
             key={project.id}
             className="opacity-0 group-hover:opacity-100"
           >
-            <div className="bg-secondary p-5 sm:p-10 flex flex-col lg:flex-row gap-8 xl:gap-12 shadow-awesome1">
+            <div className="bg-secondary p-5 sm:p-10 flex flex-col lg:flex-row gap-8 xl:gap-12 shadow-awesome-dark">
               {/* Left Column */}
               <ProjectLeftWrapper>
                 <ProjectGalleryProvider

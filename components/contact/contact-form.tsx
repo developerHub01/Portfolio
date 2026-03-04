@@ -75,7 +75,7 @@ const ContactForm = () => {
   return (
     <FrameV1 className="opacity-0 group-hover:opacity-100">
       <form
-        className="bg-secondary p-5 sm:p-10 flex flex-col gap-6 shadow-awesome1 border border-border/30"
+        className="bg-secondary p-5 sm:p-10 flex flex-col gap-6 shadow-awesome-dark border border-border/30"
         onSubmit={form.handleSubmit(handleSubmit)}
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -96,7 +96,7 @@ const ContactForm = () => {
                     type="text"
                     required
                     placeholder="Your name"
-                    className="bg-accent/40 border border-border/40 px-5 py-4 text-base text-foreground placeholder:text-muted-foreground/30 focus:outline-none focus:border-primary transition-all duration-300 shadow-awesome1 h-auto"
+                    className="bg-accent/40 border border-border/40 px-5 py-4 text-base text-foreground placeholder:text-muted-foreground/30 focus:outline-none focus:border-primary transition-all duration-300 shadow-awesome-light h-auto"
                     {...field}
                   />
                   {fieldState.invalid && (
@@ -123,7 +123,7 @@ const ContactForm = () => {
                     type="email"
                     required
                     placeholder="your@email.com"
-                    className="bg-accent/40 border border-border/40 px-5 py-4 text-base text-foreground placeholder:text-muted-foreground/30 focus:outline-none focus:border-primary transition-all duration-300 shadow-awesome1 h-auto"
+                    className="bg-accent/40 border border-border/40 px-5 py-4 text-base text-foreground placeholder:text-muted-foreground/30 focus:outline-none focus:border-primary transition-all duration-300 shadow-awesome-light h-auto"
                     {...field}
                   />
                   {fieldState.invalid && (
@@ -151,7 +151,7 @@ const ContactForm = () => {
                   required
                   rows={6}
                   placeholder="Tell me about your project or say hello..."
-                  className="bg-accent/40 border border-border/40 px-5 py-4 text-base text-foreground placeholder:text-muted-foreground/30 focus:outline-none focus:border-primary transition-all duration-300 shadow-awesome1 resize-none"
+                  className="bg-accent/40 border border-border/40 px-5 py-4 text-base text-foreground placeholder:text-muted-foreground/30 focus:outline-none focus:border-primary transition-all duration-300 shadow-awesome-light resize-none"
                   {...field}
                 />
                 {fieldState.invalid && (
@@ -165,7 +165,7 @@ const ContactForm = () => {
           type="submit"
           disabled={isSubmitting}
           className={cn(
-            "self-start inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 font-primary font-bold text-base hover:bg-primary/90 transition-all duration-300 cursor-pointer shadow-awesome1 group/send",
+            "self-start inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 font-primary font-bold text-base hover:bg-primary/90 transition-all duration-300 cursor-pointer shadow-awesome-light group/send",
             {
               "opacity-80 pointer-events-none": isSubmitting,
             },
@@ -175,7 +175,7 @@ const ContactForm = () => {
           <span>Send Message</span>
           <PaperAirplaneIcon
             size={20}
-            className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+            className="group-hover:translate-x-1 transition-transform"
           />
         </button>
         {Boolean(submitMessage) && (

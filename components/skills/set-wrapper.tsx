@@ -14,7 +14,7 @@ const SetWrapper = ({
 }: SetWrapperProps) => (
   <div
     className={cn(
-      "bg-secondary p-5 sm:p-10 flex flex-col gap-6 shadow-awesome1",
+      "bg-secondary p-5 sm:p-10 flex flex-col gap-6 shadow-awesome-dark",
       className,
     )}
     {...props}
