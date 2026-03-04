@@ -40,7 +40,7 @@ export const CONTACT_METHODS: Array<ContactMethodInterface> = [
   {
     id: "linkedin",
     label: "LinkedIn",
-    value: "linkedin.com/in/abdus-shohid-shakil-870959387",
+    value: "abdus-shohid-shakil-870959387",
     href: "https://www.linkedin.com/in/abdus-shohid-shakil-870959387/",
     Icon: LinkedinIcon,
     external: true,
@@ -48,7 +48,7 @@ export const CONTACT_METHODS: Array<ContactMethodInterface> = [
   {
     id: "github",
     label: "GitHub",
-    value: "github.com/developerHub01",
+    value: "developerHub01",
     href: "https://github.com/developerHub01",
     Icon: GithubIcon,
     external: true,
@@ -56,7 +56,7 @@ export const CONTACT_METHODS: Array<ContactMethodInterface> = [
   {
     id: "facebook",
     label: "Facebook",
-    value: "facebook.com/abdusshohid.shakil.5",
+    value: "abdusshohid.shakil.5",
     href: "https://www.facebook.com/abdusshohid.shakil.5",
     Icon: FacebookIcon,
     external: true,
@@ -64,7 +64,7 @@ export const CONTACT_METHODS: Array<ContactMethodInterface> = [
   {
     id: "instagram",
     label: "Instagram",
-    value: "instagram.com/shakil102043",
+    value: "shakil102043",
     href: "https://www.instagram.com/shakil102043/",
     Icon: InstagramIcon,
     external: true,
@@ -72,9 +72,9 @@ export const CONTACT_METHODS: Array<ContactMethodInterface> = [
   {
     id: "youtube",
     label: "YouTube",
+    value: "@DeveloperHub1",
     href: "https://www.youtube.com/@DeveloperHub1",
     Icon: YouTubeIcon,
-    value: "@DeveloperHub1",
     external: true,
   },
   {
