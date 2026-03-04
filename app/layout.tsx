@@ -21,9 +21,20 @@ const displaySans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Shakil Front-End Dev",
+  title: "Shakil Software Developer",
   description:
-    "Abdus Shohid Shakil, frontend developer and complex frontend lover.",
+    "Abdus Shohid Shakil, frontend focused fullstack js developer and complex frontend lover.",
+  openGraph: {
+    title: "Shakil Software Developer",
+    description:
+      "Abdus Shohid Shakil, frontend focused fullstack js developer and complex frontend lover.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shakil Software Developer",
+    description:
+      "Abdus Shohid Shakil, frontend focused fullstack js developer and complex frontend lover.",
+  },
 };
 
 export default function RootLayout({

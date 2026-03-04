@@ -3,10 +3,10 @@ import BackgroundV1 from "@/components/ui/background-v1";
 import FrameV1 from "@/components/ui/frame-v1";
 import Image from "next/image";
 
-const OgBanner = () => {
+const TwitterCard = () => {
   return (
     <div>
-      <div className="w-[1200px]! h-[630px]! relative flex items-center justify-center overflow-hidden bg-background border-2 gap-15">
+      <div className="w-[1200px]! h-[628px]! relative flex items-center justify-center overflow-hidden bg-background border-2 gap-15">
         <BackgroundV1 className="absolute inset-0" />
         <div className="w-full max-w-90 flex flex-col gap-3">
           <FrameV1 className="opacity-100">
@@ -50,4 +50,4 @@ const OgBanner = () => {
   );
 };
 
-export default OgBanner;
+export default TwitterCard;
