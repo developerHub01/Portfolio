@@ -1,10 +1,13 @@
 import {
+  CodeforcesIcon,
   EnvelopeIcon,
   FacebookIcon,
   GithubIcon,
   InstagramIcon,
+  LeetcodeIcon,
   LinkedinIcon,
   PhoneIcon,
+  YouTubeIcon,
 } from "@/components/icons";
 import { ContactMethodInterface } from "@/types/contact.types";
 
@@ -22,6 +25,14 @@ export const CONTACT_METHODS: Array<ContactMethodInterface> = [
     label: "Phone",
     value: "+880 1703374162",
     href: "tel:+8801703374162",
+    Icon: PhoneIcon,
+    external: false,
+  },
+  {
+    id: "whatsapp",
+    label: "Whatsapp",
+    value: "01703374162",
+    href: "https://wa.me/01703374162",
     Icon: PhoneIcon,
     external: false,
   },
@@ -55,6 +66,30 @@ export const CONTACT_METHODS: Array<ContactMethodInterface> = [
     value: "instagram.com/shakil102043",
     href: "https://www.instagram.com/shakil102043/",
     Icon: InstagramIcon,
+    external: true,
+  },
+  {
+    id: "youtube",
+    label: "YouTube",
+    href: "https://www.youtube.com/@DeveloperHub1",
+    Icon: YouTubeIcon,
+    value: "@DeveloperHub1",
+    external: true,
+  },
+  {
+    id: "codeforces",
+    label: "Codeforces",
+    value: "abdusShohidShakil",
+    href: "https://codeforces.com/profile/abdusShohidShakil/",
+    Icon: CodeforcesIcon,
+    external: true,
+  },
+  {
+    id: "leetcode",
+    label: "Leetcode",
+    value: "shakil102043",
+    href: "https://leetcode.com/u/shakil102043/",
+    Icon: LeetcodeIcon,
     external: true,
   },
 ] as const;
