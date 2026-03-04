@@ -36,7 +36,7 @@ const ProjectGallery = ({ className, images, title, ...props }: Props) => {
             className="object-cover transition-transform duration-500 group-hover/img:scale-105"
           />
         </AspectRatio>
-        {images.length && <ProjectCarousel />}
+        {images.length > 1 && <ProjectCarousel />}
       </div>
       <GalleryLightbox />
     </>
