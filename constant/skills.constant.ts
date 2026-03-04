@@ -77,6 +77,10 @@ export const SKILLS: Record<"primary" | "secondary", Array<SkillInterface>> = {
       label: "Nuxt.js",
     },
     {
+      id: "alpine",
+      label: "Alpine.js",
+    },
+    {
       id: "supabase",
       label: "Supabase",
     },
