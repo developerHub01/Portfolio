@@ -7,7 +7,7 @@ export const Icon = ({
   size = 24,
   strokeWidth = 2,
   className,
-  fill="none",
+  fill = "none",
   ...props
 }: IconProps) => {
   return (
