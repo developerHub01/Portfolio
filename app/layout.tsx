@@ -21,6 +21,11 @@ const displaySans = Open_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    (process.env.NEXT_PUBLIC_ENV === ""
+      ? process.env.NEXT_PUBLIC_SITE_DEV_URL
+      : process.env.NEXT_PUBLIC_SITE_PROD_URL)!,
+  ),
   title: "Shakil Software Developer",
   description:
     "Abdus Shohid Shakil, frontend focused fullstack js developer and complex frontend lover.",
