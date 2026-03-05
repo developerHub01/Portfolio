@@ -96,7 +96,7 @@ const DesktopMenu = () => {
                 />
               ) : (
                 <Tooltip>
-                  <TooltipTrigger asChild>
+                  <TooltipTrigger className="w-full">
                     <MenuItem
                       isActive={isActive}
                       isFull={isFull}
@@ -118,7 +118,7 @@ const DesktopMenu = () => {
           <ResumeButton isFull={isFull} />
         ) : (
           <Tooltip>
-            <TooltipTrigger asChild>
+            <TooltipTrigger className="w-full">
               <ResumeButton isFull={isFull} />
             </TooltipTrigger>
             <TooltipContent
