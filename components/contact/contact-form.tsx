@@ -87,6 +87,7 @@ const ContactForm = () => {
                 <Field>
                   <label
                     htmlFor="contact-name"
+                    aria-labelledby="contact-name"
                     className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest font-bold"
                   >
                     Full Name
@@ -114,6 +115,7 @@ const ContactForm = () => {
                 <Field>
                   <label
                     htmlFor="contact-email"
+                    aria-labelledby="contact-email"
                     className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest font-bold"
                   >
                     Email
@@ -142,6 +144,7 @@ const ContactForm = () => {
               <Field>
                 <label
                   htmlFor="contact-message"
+                  aria-labelledby="contact-message"
                   className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest font-bold"
                 >
                   Message
