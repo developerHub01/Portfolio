@@ -86,7 +86,8 @@ const GalleryLightbox = () => {
               alt={title}
               fill
               className="object-contain"
-              loading="lazy"
+              priority
+              sizes="(max-width: 1024px) 100vw, 1024px"
             />
           </motion.div>
         </motion.div>

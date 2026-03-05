@@ -42,8 +42,7 @@ const ProjectGallery = ({
             fill
             className="object-cover transition-transform duration-500 group-hover/img:scale-105"
             priority={priority}
-            loading="lazy"
-              sizes="(max-width: 1024px) 100vw, 50vw"
+            sizes="(max-width: 1024px) 100vw, 50vw"
           />
         </AspectRatio>
         {images.length > 1 && <ProjectCarousel />}

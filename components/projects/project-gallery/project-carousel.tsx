@@ -45,6 +45,7 @@ const ProjectCarousel = () => {
                 fill
                 className="object-cover w-full h-full"
                 loading="lazy"
+                sizes="(max-width: 768px) 25vw, 20vw"
               />
             </AspectRatio>
           </CarouselItem>

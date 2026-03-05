@@ -186,7 +186,7 @@ export const PROJECTS: Array<ProjectDataInterface> = [
       "A versatile Chrome extension for scheduling reminders. Supports one-time, daily, and weekly recurring schedules. Ideal for students and professionals to manage tasks and get timely notifications.",
     images: Array.from(
       { length: 13 },
-      (_, index) => `/projects/schedular-2.o/${index + 1}.png`,
+      (_, index) => `/projects/schedular-2-o/${index + 1}.png`,
     ),
     features: [
       "Three flexible schedule types: One-time, Regular (Daily), and Frequent (Weekly)",
