@@ -1,4 +1,5 @@
 import {
+  BlogIcon,
   ContactIcon,
   EducationIcon,
   HomeIcon,
@@ -38,6 +39,12 @@ export const SIDEBAR_MENU_LIST: Array<SidebarMenuItemInterface> = [
     title: "Projects",
     url: "/projects",
     Icon: ProjectIcon,
+  },
+  {
+    id: "blogs",
+    title: "Blogs",
+    url: "/blogs",
+    Icon: BlogIcon,
   },
   {
     id: "contact",
