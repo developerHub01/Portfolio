@@ -86,6 +86,7 @@ const GalleryLightbox = () => {
               alt={title}
               fill
               className="object-contain"
+              loading="lazy"
             />
           </motion.div>
         </motion.div>

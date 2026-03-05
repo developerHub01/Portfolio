@@ -44,6 +44,7 @@ const ProjectCarousel = () => {
                 alt={`${title} thumbnail ${idx + 1}`}
                 fill
                 className="object-cover w-full h-full"
+                loading="lazy"
               />
             </AspectRatio>
           </CarouselItem>

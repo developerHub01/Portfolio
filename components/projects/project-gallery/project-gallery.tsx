@@ -11,9 +11,16 @@ import GalleryLightbox from "@/components/projects/project-gallery/gallery-light
 interface Props extends ComponentProps<"div"> {
   images: Array<string>;
   title: string;
+  priority?: boolean;
 }
 
-const ProjectGallery = ({ className, images, title, ...props }: Props) => {
+const ProjectGallery = ({
+  className,
+  images,
+  title,
+  priority = false,
+  ...props
+}: Props) => {
   const { selectedIndex, handleChangeIsLightboxOpen } = useProjectGallery();
 
   if (!images || !images.length) return null;
@@ -34,6 +41,9 @@ const ProjectGallery = ({ className, images, title, ...props }: Props) => {
             alt={`${title} - image ${selectedIndex + 1}`}
             fill
             className="object-cover transition-transform duration-500 group-hover/img:scale-105"
+            priority={priority}
+            loading="lazy"
+              sizes="(max-width: 1024px) 100vw, 50vw"
           />
         </AspectRatio>
         {images.length > 1 && <ProjectCarousel />}

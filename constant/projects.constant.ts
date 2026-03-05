@@ -133,4 +133,95 @@ export const PROJECTS: Array<ProjectDataInterface> = [
       },
     ],
   },
+  {
+    id: "cf-dark",
+    title: "CF Dark",
+    subtitle: "Codeforces Dark Theme Extension",
+    year: "2023",
+    description:
+      "A Chrome extension that applies a dark theme to Codeforces, reducing eye strain during long coding sessions. Features 10 distinct themes inspired by popular VS Code color palettes.",
+    images: Array.from(
+      { length: 11 },
+      (_, index) => `/projects/cf-dark/${index + 1}.png`,
+    ),
+    features: [
+      "Persistent theme settings",
+      "Eye-friendly dark themes to reduce strain",
+      "10 distinct themes including a default dark mode",
+      "Themes inspired by popular VS Code color palettes",
+      "Lightweight and performant extension",
+    ],
+    techStack: [
+      {
+        id: "html",
+        label: "HTML",
+      },
+      {
+        id: "css",
+        label: "CSS",
+      },
+      {
+        id: "javascript",
+        label: "JavaScript",
+      },
+      {
+        id: "chrome",
+        label: "Chrome",
+      },
+    ],
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/developerHub01/CF_Dark",
+        type: "github",
+      },
+    ],
+  },
+  {
+    id: "schedular-2.o",
+    title: "Scheduler 2.0",
+    subtitle: "Task Scheduling Chrome Extension",
+    year: "2023",
+    description:
+      "A versatile Chrome extension for scheduling reminders. Supports one-time, daily, and weekly recurring schedules. Ideal for students and professionals to manage tasks and get timely notifications.",
+    images: Array.from(
+      { length: 13 },
+      (_, index) => `/projects/schedular-2.o/${index + 1}.png`,
+    ),
+    features: [
+      "Three flexible schedule types: One-time, Regular (Daily), and Frequent (Weekly)",
+      "One-time Schedule: Perfect for single events or meetings",
+      "Regular Schedule: Daily recurring reminders at a set time",
+      "Frequent Schedule: Custom weekly patterns (e.g., specific days and times)",
+      "Task Management: Create, update, and delete tasks with title and description",
+      "Global 'Clear Task' feature to remove all scheduled items",
+      "Interactive dashboard with task previews and hover details",
+      "Popup notifications for scheduled tasks",
+    ],
+    techStack: [
+      {
+        id: "html",
+        label: "HTML",
+      },
+      {
+        id: "css",
+        label: "CSS",
+      },
+      {
+        id: "javascript",
+        label: "JavaScript",
+      },
+      {
+        id: "chrome",
+        label: "Chrome",
+      },
+    ],
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/developerHub01/Schedular-2.o",
+        type: "github",
+      },
+    ],
+  },
 ] as const;
