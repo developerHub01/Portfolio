@@ -18,7 +18,7 @@ export interface ProjectDataInterface {
   title: string;
   subtitle: string;
   year: string;
-  status?: string;
+  status?: "complete" | "ongoing" | "in-complete";
   version?: string;
   duration?: string;
   projectType?: ProjectType | Array<ProjectType>;

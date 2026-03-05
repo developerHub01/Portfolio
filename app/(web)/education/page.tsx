@@ -2,6 +2,7 @@ import MainHeading from "@/components/headings/MainHeading";
 import FrameV1 from "@/components/ui/frame-v1";
 import { AcademicCapIcon, CalendarIcon, MapPinIcon } from "@/components/icons";
 import PageWrapper from "@/components/ui/page-wrapper";
+import { Separator } from "@/components/ui/separator";
 
 const Page = () => {
   return (
@@ -31,7 +32,7 @@ const Page = () => {
             </div>
           </div>
 
-          <div className="h-px bg-border/20" />
+          <Separator />
 
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
             Completed a comprehensive four-year program covering core computer

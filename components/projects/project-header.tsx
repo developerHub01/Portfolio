@@ -25,7 +25,7 @@ const ProjectHeader = ({
             {String(index + 1).padStart(2, "0")}
           </span>
           <div className="flex items-center gap-2 flex-wrap justify-end">
-            {(status || version || duration) && (
+            {Boolean(status || version || duration) && (
               <div className="inline-flex items-center gap-2 bg-accent/40 px-3 py-1.5 border border-border/40 shadow-awesome-light h-fit shrink-0">
                 {status === "ongoing" && (
                   <span className="w-1.5 h-1.5 bg-primary rounded-full shrink-0 animate-pulse" />

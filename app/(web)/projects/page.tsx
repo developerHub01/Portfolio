@@ -12,6 +12,7 @@ import ProjectGalleryProvider from "@/context/project-gallery-prodiver";
 import ProjectVideoProvider from "@/context/project-video-provider";
 import ProjectVideoLightbox from "@/components/projects/project-video-lightbox";
 import ProjectType from "@/components/projects/project-type";
+import { Separator } from "@/components/ui/separator";
 
 export default function Page() {
   return (
@@ -51,9 +52,9 @@ export default function Page() {
                       {Boolean(project.projectType) && (
                         <ProjectType projectType={project.projectType} />
                       )}
-                      <div className="h-px bg-border/20 mt-auto" />
+                      <Separator />
                       <ProjectTechStack techStack={project.techStack} />
-                      <div className="h-px bg-border/20 mt-auto" />
+                      <Separator />
                       <ProjectLinks links={project.links} />
                     </div>
                   </ProjectLeftWrapper>
@@ -74,19 +75,19 @@ export default function Page() {
                       {project.description}
                     </p>
 
-                    <div className="h-px bg-border/20" />
+                    <Separator />
 
                     <ProjectFeatures features={project.features} />
 
                     {/* Mobile Only Stack */}
                     <div className="flex lg:hidden flex-col gap-6">
-                      <div className="h-px bg-border/20" />
+                      <Separator />
                       {Boolean(project.projectType) && (
                         <ProjectType projectType={project.projectType} />
                       )}
-                      <div className="h-px bg-border/20" />
+                      <Separator />
                       <ProjectTechStack techStack={project.techStack} />
-                      <div className="h-px bg-border/20 mt-auto" />
+                      <Separator />
                       <ProjectLinks links={project.links} />
                     </div>
                   </div>
