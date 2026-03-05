@@ -5,6 +5,14 @@ export interface TechItemInterface {
 
 export type ProjectLinkType = "github" | "external" | "video";
 
+export type ProjectType =
+  | "web"
+  | "desktop"
+  | "mobile"
+  | "chrome extension"
+  | "firefox extension"
+  | "vscode extension";
+
 export interface ProjectDataInterface {
   id: string;
   title: string;
@@ -13,6 +21,7 @@ export interface ProjectDataInterface {
   status?: string;
   version?: string;
   duration?: string;
+  projectType?: ProjectType | Array<ProjectType>;
   description: string;
   images: Array<string>;
   features: Array<string>;

@@ -5,10 +5,11 @@ export const PROJECTS: Array<ProjectDataInterface> = [
     id: "apibolt",
     title: "APIBolt",
     subtitle: "Desktop REST API Client",
-    year: "2025 — Present",
+    year: "2025 Apr — Present",
     status: "ongoing",
     version: "v1.1.0",
-    duration: "10 months",
+    duration: "11 months",
+    projectType: "desktop",
     description:
       "A full-featured desktop API client built from scratch with project-based request management. Designed as a developer-first tool with deep customization for Web & Desktop.",
     images: Array.from(
@@ -79,8 +80,9 @@ export const PROJECTS: Array<ProjectDataInterface> = [
     id: "apibolt-market",
     title: "APIBolt Market",
     subtitle: "Theme Marketplace Platform",
-    duration: "1 month",
-    year: "2025 — 2026",
+    duration: "3 month",
+    projectType: ["web"],
+    year: "2025 Nov — Present",
     description:
       "Official marketplace for APIBolt. Developers can publish and share themes with one-click installation inside the desktop app. Fullstack implementation.",
     images: Array.from(
@@ -141,8 +143,9 @@ export const PROJECTS: Array<ProjectDataInterface> = [
     id: "cf-dark",
     title: "CF Dark",
     subtitle: "Codeforces Dark Theme Extension",
-    year: "2023",
+    year: "2023 Nov",
     duration: "1 week",
+    projectType: ["chrome extension"],
     description:
       "A Chrome extension that applies a dark theme to Codeforces, reducing eye strain during long coding sessions. Features 10 distinct themes inspired by popular VS Code color palettes.",
     images: Array.from(
@@ -186,8 +189,9 @@ export const PROJECTS: Array<ProjectDataInterface> = [
     id: "schedular-2.o",
     title: "Scheduler 2.0",
     subtitle: "Task Scheduling Chrome Extension",
-    year: "2023",
+    year: "2023 Nov",
     duration: "1 week",
+    projectType: ["chrome extension"],
     description:
       "A versatile Chrome extension for scheduling reminders. Supports one-time, daily, and weekly recurring schedules. Ideal for students and professionals to manage tasks and get timely notifications.",
     images: Array.from(

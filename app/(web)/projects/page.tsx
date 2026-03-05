@@ -11,6 +11,7 @@ import PageWrapper from "@/components/ui/page-wrapper";
 import ProjectGalleryProvider from "@/context/project-gallery-prodiver";
 import ProjectVideoProvider from "@/context/project-video-provider";
 import ProjectVideoLightbox from "@/components/projects/project-video-lightbox";
+import ProjectType from "@/components/projects/project-type";
 
 export default function Page() {
   return (
@@ -47,6 +48,10 @@ export default function Page() {
 
                     {/* Desktop Only Stack */}
                     <div className="hidden lg:flex flex-col gap-6">
+                      {Boolean(project.projectType) && (
+                        <ProjectType projectType={project.projectType} />
+                      )}
+                      <div className="h-px bg-border/20 mt-auto" />
                       <ProjectTechStack techStack={project.techStack} />
                       <div className="h-px bg-border/20 mt-auto" />
                       <ProjectLinks links={project.links} />
@@ -75,6 +80,10 @@ export default function Page() {
 
                     {/* Mobile Only Stack */}
                     <div className="flex lg:hidden flex-col gap-6">
+                      <div className="h-px bg-border/20" />
+                      {Boolean(project.projectType) && (
+                        <ProjectType projectType={project.projectType} />
+                      )}
                       <div className="h-px bg-border/20" />
                       <ProjectTechStack techStack={project.techStack} />
                       <div className="h-px bg-border/20 mt-auto" />
