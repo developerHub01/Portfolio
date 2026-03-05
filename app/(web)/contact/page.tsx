@@ -22,6 +22,7 @@ const Page = () => {
               key={method.id}
               href={method.href}
               target={method.external ? "_blank" : "_self"}
+              aria-label={`${method.label} contact id ${method.value}`}
               rel="noopener noreferrer"
               className="group/card"
             >
