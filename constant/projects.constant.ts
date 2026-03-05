@@ -6,6 +6,9 @@ export const PROJECTS: Array<ProjectDataInterface> = [
     title: "APIBolt",
     subtitle: "Desktop REST API Client",
     year: "2025 — Present",
+    status: "ongoing",
+    version: "v1.1.0",
+    duration: "10 months",
     description:
       "A full-featured desktop API client built from scratch with project-based request management. Designed as a developer-first tool with deep customization for Web & Desktop.",
     images: Array.from(
@@ -76,7 +79,8 @@ export const PROJECTS: Array<ProjectDataInterface> = [
     id: "apibolt-market",
     title: "APIBolt Market",
     subtitle: "Theme Marketplace Platform",
-    year: "2022 — Present",
+    duration: "1 month",
+    year: "2025 — 2026",
     description:
       "Official marketplace for APIBolt. Developers can publish and share themes with one-click installation inside the desktop app. Fullstack implementation.",
     images: Array.from(
@@ -138,6 +142,7 @@ export const PROJECTS: Array<ProjectDataInterface> = [
     title: "CF Dark",
     subtitle: "Codeforces Dark Theme Extension",
     year: "2023",
+    duration: "1 week",
     description:
       "A Chrome extension that applies a dark theme to Codeforces, reducing eye strain during long coding sessions. Features 10 distinct themes inspired by popular VS Code color palettes.",
     images: Array.from(
@@ -182,6 +187,7 @@ export const PROJECTS: Array<ProjectDataInterface> = [
     title: "Scheduler 2.0",
     subtitle: "Task Scheduling Chrome Extension",
     year: "2023",
+    duration: "1 week",
     description:
       "A versatile Chrome extension for scheduling reminders. Supports one-time, daily, and weekly recurring schedules. Ideal for students and professionals to manage tasks and get timely notifications.",
     images: Array.from(

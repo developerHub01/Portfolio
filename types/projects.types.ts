@@ -10,6 +10,9 @@ export interface ProjectDataInterface {
   title: string;
   subtitle: string;
   year: string;
+  status?: string;
+  version?: string;
+  duration?: string;
   description: string;
   images: Array<string>;
   features: Array<string>;

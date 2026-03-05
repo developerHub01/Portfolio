@@ -60,6 +60,9 @@ export default function Page() {
                       subtitle={project.subtitle}
                       title={project.title}
                       year={project.year}
+                      status={project.status}
+                      version={project.version}
+                      duration={project.duration}
                     />
 
                     <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
