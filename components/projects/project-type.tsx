@@ -1,10 +1,4 @@
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 import { ProjectDataInterface } from "@/types/projects.types";
-import Image from "next/image";
 
 interface Props {
   projectType: ProjectDataInterface["projectType"];
