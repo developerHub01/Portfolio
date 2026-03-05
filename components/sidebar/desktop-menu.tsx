@@ -26,7 +26,7 @@ const DesktopMenu = () => {
   return (
     <motion.aside
       className={cn(
-        "w-60 grow-0 flex flex-col bg-sidebar select-none border-r-2 overflow-hidden",
+        "w-60 grow-0 flex flex-col bg-sidebar select-none border-r-2",
         {
           "w-15.5": !isFull,
         },
@@ -82,6 +82,7 @@ const DesktopMenu = () => {
           )}
         </AnimatePresence>
       </motion.div>
+      {/* <div className="flex-1 min-h-0 h-full"></div> */}
       <SidebarMenuWrapper>
         {SIDEBAR_MENU_LIST.map(menuItem => {
           const isActive = pathname === menuItem.url;

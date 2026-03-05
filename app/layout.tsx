@@ -62,7 +62,7 @@ export default function RootLayout({
         gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID!}
       />
       <body
-        className={`${primarySans.variable} ${displaySans.variable} antialiased h-screen overflow-hidden flex flex-col`}
+        className={`${primarySans.variable} ${displaySans.variable} antialiased h-dvh overflow-hidden flex flex-col`}
       >
         <ThemeProvider
           attribute="class"

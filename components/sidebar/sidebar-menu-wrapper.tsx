@@ -8,7 +8,7 @@ const SidebarMenuWrapper = ({
   ...props
 }: ComponentProps<"ul">) => {
   return (
-    <ScrollArea className="w-full h-full flex-1 min-h-0">
+    <ScrollArea className="w-full flex-1 min-h-0">
       <ul
         className={cn("flex flex-col select-none h-full", className)}
         {...props}

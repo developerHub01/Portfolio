@@ -9,11 +9,11 @@ interface Props {
 const Layout = ({ children }: Props) => {
   return (
     <SidebarProvider>
-      <main className="w-full h-screen flex overflow-hidden">
+      <main className="w-full h-dvh flex overflow-hidden">
         <Sidebar />
         <section className="flex-1 bg-background h-full">
           <ScrollArea className="w-full h-full min-h-0 [&>div>div]:h-full">
-            <div className="w-full min-h-screen flex *:flex-1 *:h-auto">
+            <div className="w-full min-h-dvh flex *:flex-1 *:h-auto">
               {children}
             </div>
           </ScrollArea>
