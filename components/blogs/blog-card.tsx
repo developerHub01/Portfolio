@@ -34,6 +34,7 @@ const BlogCard = ({ article }: BlogCardProps) => {
     <Link
       href={article.url}
       target="_blank"
+      aria-label={`read blog post ${article.title}`}
       rel="noopener noreferrer"
       className="group/card"
     >

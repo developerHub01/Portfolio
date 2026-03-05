@@ -5,7 +5,7 @@ const BlogPageIntro = () => {
   return (
     <div className="flex flex-col gap-4 sm:gap-5">
       <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl">
-        My latest Dev.to posts, focused on frontend engineering, product
+        My latest 4 Dev.to blog posts, focused on frontend engineering, product
         building, and practical JavaScript workflows.
       </p>
 
