@@ -49,6 +49,7 @@ const DesktopMenu = () => {
       >
         <motion.button
           title="toggle"
+          aria-label="toggle sidebar"
           type="button"
           layout
           className={cn("cursor-pointer", {
@@ -157,6 +158,7 @@ const MenuItem = ({
     <Link
       id={id}
       href={url}
+      aria-label={title}
       className={cn(
         "flex px-4.75 py-4 gap-4 items-center text-sm relative",
         "hover:bg-secondary/40",
@@ -201,6 +203,7 @@ const ResumeButton = ({ isFull }: ResumeButtonProps) => {
     <Link
       href={RESUME_HREF}
       download
+      aria-label="Download Resume"
       className={cn(
         "flex items-center gap-4 rounded-sm px-4.75 py-4 text-sm font-primary uppercase tracking-wider bg-secondary/50 hover:bg-secondary/80 transition-colors duration-75",
         {

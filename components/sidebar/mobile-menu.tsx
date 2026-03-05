@@ -71,12 +71,13 @@ const MobileMenu = () => {
         }}
       >
         <div className="w-full px-4.75 py-4 text-xl font-black font-primary leading-none flex justify-center items-center gap-4 select-none">
-          <Link href={"/"} className="flex-1 select-none">
+          <Link href={"/"} className="flex-1 select-none" aria-label="Home">
             Shakil
           </Link>
           <button
             title="toggle"
             type="button"
+            aria-label="close sidebar"
             className="cursor-pointer"
             onClick={() => handleToggleIsOpen(false)}
           >
@@ -89,6 +90,7 @@ const MobileMenu = () => {
             return (
               <li key={id} className="w-full">
                 <Link
+                  aria-label={title}
                   href={url}
                   className={cn(
                     "flex px-4.75 py-4 gap-4 items-center text-sm relative",
@@ -109,6 +111,7 @@ const MobileMenu = () => {
         <div className="mt-auto border-t border-border/30">
           <Link
             href={RESUME_HREF}
+            aria-label="Download Resume"
             download
             className="flex items-center gap-4 px-4.75 py-4 text-sm font-primary uppercase tracking-wider bg-secondary/50 hover:bg-secondary/80 transition-colors duration-75"
           >
