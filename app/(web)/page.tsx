@@ -32,6 +32,7 @@ const HomePage = () => {
           <div className="flex flex-wrap items-center gap-4">
             <Link
               href="/projects"
+              aria-label="view my projects"
               className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 sm:px-6 sm:py-3 font-primary font-bold text-xs lg:text-sm shadow-awesome-light transition-colors hover:bg-primary/90 uppercase tracking-widest border-2 border-primary select-none"
             >
               <span>View Projects</span>
@@ -39,6 +40,7 @@ const HomePage = () => {
             </Link>
             <Link
               href="/contact"
+              aria-label="Contact Me"
               className="px-4 py-2 sm:px-6 sm:py-3 font-primary font-bold text-xs lg:text-sm border-2 border-border/40 transition-colors hover:bg-accent hover:border-border/60 shadow-awesome-light uppercase tracking-widest select-none bg-secondary"
             >
               Contact Me
@@ -72,6 +74,8 @@ const HomePage = () => {
                       key={social.id}
                       href={social.href}
                       target="_blank"
+                      aria-label={`${social.id} social link`}
+                      title={`${social.id} social link`}
                       rel="noopener noreferrer"
                       className="w-full"
                     >
