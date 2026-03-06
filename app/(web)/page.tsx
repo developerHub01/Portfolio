@@ -49,48 +49,48 @@ const HomePage = () => {
         </div>
 
         {/* Right Column */}
-        <div className="flex flex-col gap-6 order-1 lg:order-2 shrink-0">
-          <div className="w-full max-w-55 sm:max-w-60 md:max-w-70 lg:max-w-80 flex flex-col gap-3">
-            <FrameV1 className="opacity-100">
-              <div className="relative w-full lg:h-85 bg-secondary overflow-hidden shadow-awesome-dark border-4 border-border/20 group/photo">
-                <Image
-                  src="/home/shakil.png"
-                  width={400}
-                  height={450}
-                  alt="Abdus Shohid Shakil"
-                  className="w-full h-full object-cover"
-                  priority
-                />
-
-                <div className="absolute inset-x-0 h-0.5 bg-primary/40 shadow-[0_0_15px_rgba(67,97,238,0.8)] z-10 animate-scanline pointer-events-none" />
-              </div>
-            </FrameV1>
-
-            <FrameV1 className="opacity-100">
-              <div className="bg-secondary p-2 md:p-4 border-4 border-border/10 shadow-awesome-dark grid grid-cols-5 gap-2">
-                {SOCIALS.map(social => {
-                  return (
-                    <Link
-                      key={social.id}
-                      href={social.href}
-                      target="_blank"
-                      aria-label={`${social.id} social link`}
-                      title={`${social.id} social link`}
-                      rel="noopener noreferrer"
-                      className="w-full"
+        <div className="w-full max-w-75 lg:max-w-82 flex flex-col gap-3 order-1 lg:order-2 shrink-0">
+          <FrameV1 className="opacity-100">
+            <AspectRatio
+              ratio={4 / 5}
+              className="relative w-full bg-secondary overflow-hidden shadow-awesome-dark border-4 border-border/20 group/photo"
+            >
+              <Image
+                src="/home/shakil.png"
+                width={400}
+                height={450}
+                alt="Abdus Shohid Shakil"
+                className="w-full h-full object-cover"
+                priority
+              />
+              <div className="absolute inset-x-0 h-0.5 bg-primary/40 shadow-[0_0_15px_rgba(55,153,251,0.8)] z-10 animate-scanline pointer-events-none" />
+            </AspectRatio>
+          </FrameV1>
+          
+          <FrameV1 className="opacity-100">
+            <div className="bg-secondary p-2 md:p-4 border-4 border-border/10 shadow-awesome-dark grid grid-cols-5 gap-2">
+              {SOCIALS.map(social => {
+                return (
+                  <Link
+                    key={social.id}
+                    href={social.href}
+                    target="_blank"
+                    aria-label={`${social.id} social link`}
+                    title={`${social.id} social link`}
+                    rel="noopener noreferrer"
+                    className="w-full"
+                  >
+                    <AspectRatio
+                      ratio={1}
+                      className="p-0 w-full text-primary bg-accent hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-awesome-light border border-transparent hover:border-border/40 flex justify-center items-center"
                     >
-                      <AspectRatio
-                        ratio={1}
-                        className="p-0 w-full text-primary bg-accent hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-awesome-light border border-transparent hover:border-border/40 flex justify-center items-center"
-                      >
-                        <social.Icon className="size-4 sm:size-5" />
-                      </AspectRatio>
-                    </Link>
-                  );
-                })}
-              </div>
-            </FrameV1>
-          </div>
+                      <social.Icon className="size-4 sm:size-5" />
+                    </AspectRatio>
+                  </Link>
+                );
+              })}
+            </div>
+          </FrameV1>
         </div>
       </Container>
     </div>
