@@ -45,7 +45,7 @@ const GalleryLightbox = () => {
             <CloseIcon size={24} />
           </button>
 
-          {Boolean(images.length) && (
+          {images.length > 1 && (
             <>
               <button
                 type="button"
