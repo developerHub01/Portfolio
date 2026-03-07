@@ -41,7 +41,7 @@ const Page = () => {
               key={info.label}
               className="opacity-0 group-hover:opacity-100"
             >
-              <div className="bg-secondary p-4 sm:p-6 flex flex-col gap-2 shadow-awesome-light hover:bg-accent transition-all duration-300 md:group-has-[:hover]/container:not-hover:blur-xs hover:blur-none border border-border/30 h-full">
+              <div className="bg-secondary p-4 sm:p-6 flex flex-col gap-2 shadow-awesome-light hover:bg-accent transition-all duration-300 border border-border/30 h-full">
                 <span className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest font-bold">
                   {info.label}
                 </span>

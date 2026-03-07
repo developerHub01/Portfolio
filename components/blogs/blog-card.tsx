@@ -42,7 +42,7 @@ const BlogCard = ({ article }: BlogCardProps) => {
         className="opacity-0 group-hover/card:opacity-100"
         wrapperClass="h-full"
       >
-        <article className="h-full bg-secondary border border-border/30 shadow-awesome-light hover:bg-accent transition-all duration-300 md:group-has-[:hover]/container:not-hover:blur-xs hover:blur-none p-4 sm:p-5 flex flex-col gap-4">
+        <article className="h-full bg-secondary border border-border/30 shadow-awesome-light hover:bg-accent transition-all duration-300 p-4 sm:p-5 flex flex-col gap-4">
           <div className="h-45 sm:h-50 border border-border/30 relative overflow-hidden bg-accent/30">
             {Boolean(article.cover_image) && (
               <Image

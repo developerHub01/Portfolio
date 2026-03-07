@@ -16,7 +16,7 @@ const Page = () => {
       {/* Contact methods */}
       <div className="flex flex-col gap-6">
         <SecondaryHeading>Reach Me</SecondaryHeading>
-        <div className="group/container grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {CONTACT_METHODS.map(method => (
             <Link
               key={method.id}
@@ -27,7 +27,7 @@ const Page = () => {
               className="group/card"
             >
               <FrameV1 className="opacity-0 group-hover/card:opacity-100">
-                <div className="bg-secondary p-5 sm:p-8 flex items-center gap-5 shadow-awesome-light hover:bg-accent transition-all duration-300 h-full md:group-has-[:hover]/container:not-hover:blur-xs hover:blur-none border border-border/30">
+                <div className="bg-secondary p-5 sm:p-8 flex items-center gap-5 shadow-awesome-light hover:bg-accent transition-all duration-300 h-full border border-border/30">
                   <div className="p-4 bg-accent text-primary shrink-0 group-hover/card:bg-primary group-hover/card:text-primary-foreground transition-colors duration-300 shadow-awesome-light">
                     <method.Icon size={24} />
                   </div>

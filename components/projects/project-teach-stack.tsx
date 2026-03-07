@@ -16,12 +16,12 @@ const ProjectTechStack = ({ techStack }: Props) => {
       <h3 className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest bg-accent/20 w-fit px-2 py-1 border-l-2 border-primary font-bold">
         Stack
       </h3>
-      <div className="group/tech flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2">
         {techStack.map(tech => {
           return (
             <Tooltip key={tech.id}>
               <TooltipTrigger asChild>
-                <div className="w-10 h-10 bg-accent/30 p-2 flex items-center justify-center shadow-awesome-light hover:bg-accent transition-all duration-300 cursor-default md:group-has-[:hover]/tech:not-hover:blur-xs hover:blur-none border border-border/30">
+                <div className="w-10 h-10 bg-accent/30 p-2 flex items-center justify-center shadow-awesome-light hover:bg-accent transition-all duration-300 cursor-default border border-border/30">
                   <Image
                     src={`/skills/${tech.id}.png`}
                     width={24}

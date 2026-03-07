@@ -13,7 +13,7 @@ interface SkillsSetProps extends ComponentProps<"div"> {
 const SkillsSet = ({ className = "", skills, ...props }: SkillsSetProps) => (
   <div
     className={cn(
-      "group/container grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-4",
+      "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-4",
       className,
     )}
     {...props}
@@ -27,8 +27,6 @@ const SkillsSet = ({ className = "", skills, ...props }: SkillsSetProps) => (
             "shadow-awesome-light",
             "hover:bg-accent",
             "transition-all duration-300",
-            "md:group-has-[:hover]/container:not-hover:blur-xs",
-            "hover:blur-none",
           )}
           tabIndex={0}
         >

@@ -49,7 +49,7 @@ const Page = async () => {
       {hasFetchError && <BlogError />}
       {showEmptyState && <BlogEmpty />}
       {hasArticles && (
-        <div className="group/container grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 auto-rows-fr">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 auto-rows-fr">
           {paginatedArticles.map(article => (
             <BlogCard key={article.id} article={article} />
           ))}
