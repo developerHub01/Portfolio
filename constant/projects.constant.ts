@@ -7,17 +7,21 @@ export const PROJECTS: Array<ProjectDataInterface> = [
     subtitle: "Desktop REST API Client",
     year: "2025, Apr — Present",
     status: "ongoing",
-    version: "v1.1.0",
-    duration: "11 months",
+    version: "v2.0.0",
+    duration: "1 Year",
     projectType: "desktop",
     description:
       "A full-featured desktop API client built from scratch with project-based request management. Designed as a developer-first tool with deep customization for Web & Desktop.",
     images: Array.from(
-      { length: 1 },
+      {
+        length: 1,
+      },
       (_, index) => `/projects/api-bolt/${index + 1}.png`,
     ),
     features: [
       "Project-based request management",
+      "Built-in ABTestEngine for automated API testing (status, body, headers, cookies)",
+      "Test groups with structured execution & detailed logging",
       "Auth systems (API Key, Bearer Token) with inheritance",
       "Environment variables & cookie management",
       "Response viewer with multiple formats",
@@ -87,7 +91,9 @@ export const PROJECTS: Array<ProjectDataInterface> = [
     description:
       "Official marketplace for APIBolt. Developers can publish and share themes with one-click installation inside the desktop app. Fullstack implementation.",
     images: Array.from(
-      { length: 6 },
+      {
+        length: 6,
+      },
       (_, index) => `/projects/api-bolt-web/${index + 1}.png`,
     ),
     features: [
@@ -151,7 +157,9 @@ export const PROJECTS: Array<ProjectDataInterface> = [
     description:
       "A Chrome extension that applies a dark theme to Codeforces, reducing eye strain during long coding sessions. Features 10 distinct themes inspired by popular VS Code color palettes.",
     images: Array.from(
-      { length: 11 },
+      {
+        length: 11,
+      },
       (_, index) => `/projects/cf-dark/${index + 1}.png`,
     ),
     features: [
@@ -198,7 +206,9 @@ export const PROJECTS: Array<ProjectDataInterface> = [
     description:
       "A versatile Chrome extension for scheduling reminders. Supports one-time, daily, and weekly recurring schedules. Ideal for students and professionals to manage tasks and get timely notifications.",
     images: Array.from(
-      { length: 13 },
+      {
+        length: 13,
+      },
       (_, index) => `/projects/schedular-2-o/${index + 1}.png`,
     ),
     features: [

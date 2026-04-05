@@ -23,7 +23,7 @@ const Page = () => {
             <div className="flex flex-wrap items-center gap-6 text-sm sm:text-base text-muted-foreground font-mono">
               <span className="flex items-center gap-2 bg-accent/20 px-3 py-1 border border-border/30">
                 <MapPinIcon size={16} />
-                North East University, Bangladesh
+                North East University Bangladesh
               </span>
               <span className="flex items-center gap-2 bg-accent/20 px-3 py-1 border border-border/30 text-primary font-bold">
                 <CalendarIcon size={16} />
