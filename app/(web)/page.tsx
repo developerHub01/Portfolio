@@ -66,7 +66,7 @@ const HomePage = () => {
               <div className="absolute inset-x-0 h-0.5 bg-primary/40 shadow-[0_0_15px_rgba(55,153,251,0.8)] z-10 animate-scanline pointer-events-none" />
             </AspectRatio>
           </FrameV1>
-          
+
           <FrameV1 className="opacity-100">
             <div className="bg-secondary p-2 md:p-4 border-4 border-border/10 shadow-awesome-dark grid grid-cols-5 gap-2">
               {SOCIALS.map(social => {

@@ -40,8 +40,8 @@ export const CONTACT_METHODS: Array<ContactMethodInterface> = [
   {
     id: "linkedin",
     label: "LinkedIn",
-    value: "abdus-shohid-shakil-870959387",
-    href: "https://www.linkedin.com/in/abdus-shohid-shakil-870959387/",
+    value: "abdus-shohid-shakil",
+    href: "https://www.linkedin.com/in/abdus-shohid-shakil/",
     Icon: LinkedinIcon,
     external: true,
   },

@@ -14,7 +14,7 @@ export const PERSONAL_INFO: Array<PersonalInfoInterface> = [
   },
   {
     label: "Role",
-    value: "Software Developer",
+    value: "Fullstack Software Developer",
   },
   {
     label: "Stack",
@@ -51,7 +51,7 @@ export const SOCIALS: Array<SocialItemInterface> = [
   {
     id: "linkedin",
     Icon: LinkedinIcon,
-    href: "https://www.linkedin.com/in/abdus-shohid-shakil-870959387/",
+    href: "https://www.linkedin.com/in/abdus-shohid-shakil/",
   },
   {
     id: "youtube",
