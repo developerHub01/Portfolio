@@ -51,7 +51,7 @@ export const SOCIALS: Array<SocialItemInterface> = [
   {
     id: "linkedin",
     Icon: LinkedinIcon,
-    href: "https://www.linkedin.com/in/abdus-shohid-shakil/",
+    href: "https://www.linkedin.com/in/shakil102043/",
   },
   {
     id: "youtube",
