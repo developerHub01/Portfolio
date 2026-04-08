@@ -2,7 +2,7 @@ interface Props {
   index: number;
   subtitle: string;
   title: string;
-  year: string;
+  year?: string;
   status?: string;
   version?: string;
   duration?: string;
@@ -35,12 +35,14 @@ const ProjectHeader = ({
                 </span>
               </div>
             )}
-            <div className="inline-flex items-center gap-2 bg-accent/40 px-3 py-1.5 border border-border/40 shadow-awesome-light h-fit shrink-0">
-              <span className="w-1.5 h-1.5 bg-primary rounded-full shrink-0" />
-              <span className="text-[10px] sm:text-xs font-mono text-foreground tracking-wider uppercase font-bold">
-                {year}
-              </span>
-            </div>
+            {Boolean(year) && (
+              <div className="inline-flex items-center gap-2 bg-accent/40 px-3 py-1.5 border border-border/40 shadow-awesome-light h-fit shrink-0">
+                <span className="w-1.5 h-1.5 bg-primary rounded-full shrink-0" />
+                <span className="text-[10px] sm:text-xs font-mono text-foreground tracking-wider uppercase font-bold">
+                  {year}
+                </span>
+              </div>
+            )}
           </div>
         </div>
         <span className="text-[10px] sm:text-xs font-mono text-muted-foreground uppercase truncate line-clamp-2">

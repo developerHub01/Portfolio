@@ -1,17 +1,19 @@
 import ProjectFeaturesWrapper from "@/components/projects/project-features-wrapper";
 
 interface Props {
-  features: Array<string>;
+  features?: Array<string>;
 }
 
 const ProjectFeatures = ({ features }: Props) => {
+  if (!features?.length) return null;
+
   return (
     <div className="flex flex-col gap-4">
       <h3 className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest bg-accent/20 w-fit px-2 py-1 border-l-2 border-primary font-bold">
         Key Features
       </h3>
       <ProjectFeaturesWrapper>
-        {features.map(feature => {
+        {features?.map(feature => {
           return (
             <li
               key={feature}

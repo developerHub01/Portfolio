@@ -147,6 +147,67 @@ export const PROJECTS: Array<ProjectDataInterface> = [
     ],
   },
   {
+    id: "portfolio",
+    title: "Dev Portfolio",
+    subtitle: "Personal Developer Portfolio",
+    duration: "1 week",
+    status: "complete",
+    projectType: ["web"],
+    description:
+      "My personal developer portfolio built to showcase projects, skills, and experience with a modern UI and smooth user experience.",
+    images: Array.from(
+      {
+        length: 1,
+      },
+      (_, index) => `/projects/portfolio/${index + 1}.png`,
+    ),
+    features: [
+      "Dynamic project rendering from structured data",
+      "Responsive design for all devices",
+      "Smooth animations using Framer Motion",
+      "Clean and minimal UI design",
+      "Reusable component-based structure",
+    ],
+    techStack: [
+      {
+        id: "typescript",
+        label: "TypeScript",
+      },
+      {
+        id: "tailwind",
+        label: "TailwindCSS",
+      },
+      {
+        id: "motion",
+        label: "Framer Motion",
+      },
+      {
+        id: "shadcn",
+        label: "ShadCN",
+      },
+      {
+        id: "react",
+        label: "React.js",
+      },
+      {
+        id: "next",
+        label: "Next.js",
+      },
+    ],
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/developerHub01/Portfolio",
+        type: "github",
+      },
+      {
+        label: "Live Preview",
+        url: "https://shakil102043.vercel.app/",
+        type: "external",
+      },
+    ],
+  },
+  {
     id: "cf-dark",
     title: "CF Dark",
     subtitle: "Codeforces Dark Theme Extension",

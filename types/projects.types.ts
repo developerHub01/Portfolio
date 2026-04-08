@@ -17,14 +17,14 @@ export interface ProjectDataInterface {
   id: string;
   title: string;
   subtitle: string;
-  year: string;
+  year?: string;
   status?: "complete" | "ongoing" | "in-complete";
   version?: string;
   duration?: string;
   projectType?: ProjectType | Array<ProjectType>;
   description: string;
   images: Array<string>;
-  features: Array<string>;
+  features?: Array<string>;
   techStack: Array<TechItemInterface>;
   links: Array<{
     label: string;
