@@ -202,7 +202,7 @@ const ResumeButton = ({ isFull }: ResumeButtonProps) => {
   return (
     <Link
       href={RESUME_HREF}
-      download
+      target="_blank"
       aria-label="Download Resume"
       className={cn(
         "flex items-center gap-4 rounded-sm px-4.75 py-4 text-sm font-primary uppercase tracking-wider bg-secondary/50 hover:bg-secondary/80 transition-colors duration-75",

@@ -110,9 +110,9 @@ const MobileMenu = () => {
         </SidebarMenuWrapper>
         <div className="mt-auto border-t border-border/30">
           <Link
+            target="_blank"
             href={RESUME_HREF}
             aria-label="Download Resume"
-            download
             className="flex items-center gap-4 px-4.75 py-4 text-sm font-primary uppercase tracking-wider bg-secondary/50 hover:bg-secondary/80 transition-colors duration-75"
           >
             <ArrowDownTrayIcon size={18} />
