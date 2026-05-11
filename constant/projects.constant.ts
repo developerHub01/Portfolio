@@ -7,8 +7,8 @@ export const PROJECTS: Array<ProjectDataInterface> = [
     subtitle: "Desktop REST API Client",
     year: "2025, Apr — Present",
     status: "ongoing",
-    version: "v2.0.0",
-    duration: "1 Year",
+    version: "v2.1.1",
+    duration: "1 Year+",
     projectType: "desktop",
     description:
       "A full-featured desktop API client built from scratch with project-based request management. Designed as a developer-first tool with deep customization for Web & Desktop.",
@@ -77,6 +77,11 @@ export const PROJECTS: Array<ProjectDataInterface> = [
         label: "Video Demo",
         url: "https://www.youtube.com/embed/u2t3AvMtXXI",
         type: "video",
+      },
+      {
+        label: "ERD",
+        url: "https://github.com/developerHub01/ApiBolt/blob/main/ERD.pdf",
+        type: "external",
       },
     ],
   },
