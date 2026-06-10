@@ -63,6 +63,10 @@ export const SKILLS: Record<"primary" | "secondary", Array<SkillInterface>> = {
       label: "Drizzle ORM",
     },
     {
+      id: "prisma",
+      label: "Prisma ORM",
+    },
+    {
       id: "mongoose",
       label: "Mongoose ORM",
     },
@@ -83,6 +87,14 @@ export const SKILLS: Record<"primary" | "secondary", Array<SkillInterface>> = {
     {
       id: "supabase",
       label: "Supabase",
+    },
+    {
+      id: "zustand",
+      label: "Zustand",
+    },
+    {
+      id: "hono",
+      label: "Hono",
     },
     {
       id: "python",

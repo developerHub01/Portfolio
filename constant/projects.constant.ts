@@ -118,24 +118,36 @@ export const PROJECTS: Array<ProjectDataInterface> = [
         label: "TailwindCSS",
       },
       {
-        id: "gsap",
-        label: "GSAP",
+        id: "react",
+        label: "React.js",
+      },
+      {
+        id: "next",
+        label: "Next.js",
       },
       {
         id: "shadcn",
         label: "ShadCN",
       },
       {
-        id: "vue",
-        label: "Vue.js",
+        id: "motion",
+        label: "Motion",
       },
       {
-        id: "nuxt",
-        label: "Nuxt.js",
+        id: "zustand",
+        label: "Zustand.js",
       },
       {
         id: "supabase",
         label: "Supabase",
+      },
+      {
+        id: "prisma",
+        label: "Prisma ORM",
+      },
+      {
+        id: "hono",
+        label: "Hono",
       },
     ],
     links: [
