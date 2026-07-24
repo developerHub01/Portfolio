@@ -70,6 +70,10 @@ export const SKILLS: Record<"primary" | "secondary", Array<SkillInterface>> = {
       id: "mongoose",
       label: "Mongoose ORM",
     },
+    {
+      id: "playwright",
+      label: "Playwright",
+    },
   ],
   secondary: [
     {
