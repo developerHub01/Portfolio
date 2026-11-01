@@ -2,6 +2,7 @@ import {
   BlogIcon,
   ContactIcon,
   EducationIcon,
+  ExperienceIcon,
   HomeIcon,
   ProjectIcon,
   SkillsIcon,
@@ -27,6 +28,12 @@ export const SIDEBAR_MENU_LIST: Array<SidebarMenuItemInterface> = [
     title: "Education",
     url: "/education",
     Icon: EducationIcon,
+  },
+  {
+    id: "experience",
+    title: "Experience",
+    url: "/experience",
+    Icon: ExperienceIcon,
   },
   {
     id: "skills",

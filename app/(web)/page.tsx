@@ -16,9 +16,13 @@ const HomePage = () => {
         {/* Left Column */}
         <div className="flex-1 flex flex-col gap-8 order-2 lg:order-1">
           <div className="flex flex-col gap-4">
-            <span className="text-primary font-mono text-sm font-bold tracking-[0.2em] uppercase">
-              Fullstack JS Developer
-            </span>
+            <div className="w-fit">
+              <FrameV1 wrapperClass="px-3 py-2 lg:px-3.5 lg:py-3">
+                <span className="text-primary font-mono text-base font-bold tracking-[0.15em] capitalize">
+                  Fullstack JS Developer & SQA Engg.
+                </span>
+              </FrameV1>
+            </div>
             <FullNameWrapper>
               Abdus Shohid <br className="hidden lg:block" />
               <span className="text-primary font-black!">Shakil</span>
